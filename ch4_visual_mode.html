@@ -40,7 +40,7 @@
     </head>
     <body>
         
-<div class="book" data-github="Maijin/radare2book" data-level="4" data-basepath="." data-revision="1397253274331">
+<div class="book" data-github="Maijin/radare2book" data-level="4" data-basepath="." data-revision="1397253494784">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
@@ -208,7 +208,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_7">
+                    <section class="normal" id="section-gitbook_9">
                     
                         <h1 id="chapter-4-visual-mode">Chapter 4: Visual mode</h1>
 <p>The visual mode is a user-friendlier interface for the commandline prompt of radare which accepts hjkl movement keys, a cursor for selecting bytes and some keybindings to ease the use of the debugger.</p>
@@ -258,9 +258,9 @@ Function Keys: (See 'e key.'), defaults <span class="hljs-keyword">to</span>:
 <h2 id="4-1-visual-cursor">4.1 Visual cursor</h2>
 <p>Pressing lowercase <code>c</code> makes the cursor appear or disappear. The cursor is used to select a range of bytes or just point to a byte to flag it (press <code>f</code> to create a new flag where the cursor points to)</p>
 <p>If you select a range of bytes press <code>i</code> and then a byte array to overwrite the selected bytes with the ones you choose in a circular copy way. For example:</p>
-<p><select 10 bytes in visual mode using upper hjkl></p>
-<p><press 'i' and then '12 34'>
-The 10 bytes selected will become: 12 34 12 34 12 34 12 34 12 34
+<pre><code>&lt;select <span class="hljs-number">10</span> <span class="hljs-keyword">bytes</span> <span class="hljs-operator">in</span> visual mode <span class="hljs-keyword">using</span> <span class="hljs-built_in">upper</span> hjkl&gt;
+&lt;press <span class="hljs-string">'i'</span> <span class="hljs-operator">and</span> <span class="hljs-keyword">then</span> <span class="hljs-string">'12 34'</span>&gt;
+</code></pre><p>The 10 bytes selected will become: 12 34 12 34 12 34 12 34 12 34
 The byte range selection can be used together with the <code>d</code> key to change the data type of the selected bytes into a string, code or a byte array.</p>
 <p>That&#39;s useful to enhace the disassembly, add metadata or just align the code if there are bytes mixed with code.</p>
 <p>In cursor mode you can set the block size by simply moving it to the position you want and pressing <code>_</code>. Then change block size.</p>
