@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Rasm2 | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch18_rahash2.html" />
+        
+        
+        <link rel="prev" href="./ch11_rabin2.html" />
+        
+
+        <meta property="og:title" content="Rasm2 | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="7" data-basepath="." data-revision="1397252382049">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch14_rasm2.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 77.77777777777777%;min-width: 66.66666666666667%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter done new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter done new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter done new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter done new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_3">
+                    
+                        <h1 id="chapter-14-rasm2">Chapter 14: Rasm2</h1>
+<p>The inline assembler/disassembler. Initially &#39;rasm&#39; was designed to be used for binary patching, just to get the bytes of a certain opcode. Here&#39;s the help</p>
+<pre><code>$ rasm2 -h
+Usage: rasm2 [-CdDehLBvw] [-a arch] [-b bits] [-o addr] [-s syntax]
+             [-f file] [-F fil:ter] [-i skip] [-l len] 'code'|hex|-
+ -<span class="ruby">a [arch]    <span class="hljs-constant">Set</span> architecture to assemble/disassemble (see -<span class="hljs-constant">L</span>)
+</span> -<span class="ruby">b [bits]    <span class="hljs-constant">Set</span> cpu register size (<span class="hljs-number">8</span>, <span class="hljs-number">16</span>, <span class="hljs-number">32</span>, <span class="hljs-number">64</span>) (<span class="hljs-constant">RASM2_BITS</span>)
+</span> -<span class="ruby">c [cpu]     <span class="hljs-constant">Select</span> specific <span class="hljs-constant">CPU</span> (depends on arch)
+</span> -<span class="ruby"><span class="hljs-constant">C</span>           <span class="hljs-constant">Output</span> <span class="hljs-keyword">in</span> <span class="hljs-constant">C</span> format
+</span> -<span class="ruby">d, -<span class="hljs-constant">D</span>       <span class="hljs-constant">Disassemble</span> from hexpair bytes (-<span class="hljs-constant">D</span> show hexpairs)
+</span> -<span class="ruby">e           <span class="hljs-constant">Use</span> big endian instead of little endian
+</span> -<span class="ruby">f [file]    <span class="hljs-constant">Read</span> data from file
+</span> -<span class="ruby"><span class="hljs-constant">F</span> [<span class="hljs-symbol">in:</span>out]  <span class="hljs-constant">Specify</span> input <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> output filters (att2intel, x86.pseudo, ...)
+</span> -<span class="ruby">h           <span class="hljs-constant">Show</span> this help
+</span> -<span class="ruby">i [len]     ignore/skip <span class="hljs-constant">N</span> bytes of the input buffer
+</span> -<span class="ruby">k [kernel]  <span class="hljs-constant">Select</span> operating system (linux, windows, darwin, ..)
+</span> -<span class="ruby">l [len]     <span class="hljs-constant">Input</span>/<span class="hljs-constant">Output</span> length
+</span> -<span class="ruby"><span class="hljs-constant">L</span>           <span class="hljs-constant">List</span> supported asm plugins
+</span> -<span class="ruby">o [offset]  <span class="hljs-constant">Set</span> start address <span class="hljs-keyword">for</span> code (default <span class="hljs-number">0</span>)
+</span> -<span class="ruby"><span class="hljs-constant">O</span> [file]    <span class="hljs-constant">Output</span> file name (rasm2 -<span class="hljs-constant">Bf</span> a.asm -<span class="hljs-constant">O</span> a)
+</span> -<span class="ruby">s [syntax]  <span class="hljs-constant">Select</span> syntax (intel, att)
+</span> -<span class="ruby"><span class="hljs-constant">B</span>           <span class="hljs-constant">Binary</span> input/output (-l is mandatory <span class="hljs-keyword">for</span> binary input)
+</span> -<span class="ruby">v           <span class="hljs-constant">Show</span> version information
+</span> -<span class="ruby">w           <span class="hljs-constant">What</span><span class="hljs-string">'s this instruction for? describe opcode
+</span></span> If '-l' value is greater than output length, output is padded with nops
+ If the last argument is '-' reads from stdin
+</code></pre><p>Asm supported plugins can be listed with &quot;-L&quot;</p>
+<pre><code>$ rasm2 <span class="hljs-attribute">-L</span>
+_d  <span class="hljs-number">16</span>         <span class="hljs-number">8051</span>        PD      <span class="hljs-number">8051</span> Intel CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      arc         GPL3    Argonaut RISC Core
+ad  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   arm         GPL3    Acorn RISC Machine CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   arm<span class="hljs-built_in">.</span>cs      BSD     Capstone ARM disassembler
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      arm<span class="hljs-built_in">.</span>winedbg LGPL2   WineDBG<span class="hljs-string">'s ARM disassembler
+_d  16 32      avr         GPL     AVR Atmel
+ad  32         bf          LGPL3   Brainfuck
+_d  16         cr16        LGPL3   cr16 disassembly plugin
+_d  16         csr         PD      Cambridge Silicon Radio (CSR)
+ad  32 64      dalvik      LGPL3   AndroidVM Dalvik
+ad  16         dcpu16      PD      Mojang'</span>s DCPU<span class="hljs-subst">-</span><span class="hljs-number">16</span>
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ebc         LGPL3   EFI Bytecode
+_d  <span class="hljs-number">8</span>          gb          LGPL3   GameBoy(TM) (z80<span class="hljs-attribute">-like</span>)
+_d  <span class="hljs-number">16</span>         h8300       LGPL3   H8/<span class="hljs-number">300</span> disassembly plugin
+_d  <span class="hljs-number">8</span>          i8080       BSD     Intel <span class="hljs-number">8080</span> CPU
+ad  <span class="hljs-number">32</span>         java        Apache  Java bytecode
+_d  <span class="hljs-number">32</span>         m68k        BSD     Motorola <span class="hljs-number">68000</span>
+_d  <span class="hljs-number">32</span>         malbolge    LGPL3   Malbolge Ternary VM
+ad  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      mips        GPL3    MIPS CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   mips<span class="hljs-built_in">.</span>cs     BSD     Capstone MIPS disassembler
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   msil        PD      <span class="hljs-built_in">.</span>NET Microsoft Intermediate Language
+_d  <span class="hljs-number">32</span>         nios2       GPL3    NIOS II Embedded Processor
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ppc         GPL3    PowerPC
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ppc<span class="hljs-built_in">.</span>cs      BSD     Capstone PowerPC disassembler
+ad             rar         LGPL3   RAR VM
+_d  <span class="hljs-number">32</span>         sh          GPL3    SuperH<span class="hljs-subst">-</span><span class="hljs-number">4</span> CPU
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      sparc       GPL3    Scalable Processor Architecture
+_d  <span class="hljs-number">32</span>         tms320      LGPLv3  TMS320 DSP family
+_d  <span class="hljs-number">32</span>         ws          LGPL3   Whitespace esotheric VM
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   x86         BSD     udis86 x86<span class="hljs-subst">-</span><span class="hljs-number">16</span>,<span class="hljs-number">32</span>,<span class="hljs-number">64</span>
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   x86<span class="hljs-built_in">.</span>cs      BSD     Capstone X86 disassembler
+a_  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      x86<span class="hljs-built_in">.</span>nz      LGPL3   x86 handmade assembler
+ad  <span class="hljs-number">32</span>         x86<span class="hljs-built_in">.</span>olly    GPL2    OllyDBG X86 disassembler
+ad  <span class="hljs-number">8</span>          z80         NC<span class="hljs-attribute">-GPL2</span> Zilog Z80
+</code></pre><h2 id="14-1-assemble">14.1 Assemble</h2>
+<p>It is quite common to use &#39;rasm2&#39; from the shell. It is a nice utility for copypasting the hexpairs that represent the opcode.</p>
+<pre><code>$ rasm2 <span class="hljs-operator">-a</span> x86 -b <span class="hljs-number">32</span> <span class="hljs-string">'mov eax, 33'</span>
+b821000000
+
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'push eax;nop;nop'</span> | rasm2 <span class="hljs-operator">-f</span> -
+<span class="hljs-number">5090</span>
+</code></pre><p>Rasm2 is used from radare core to write bytes using &#39;wa&#39; command. </p>
+<p>It is possible to assemble for x86 (intel syntax), olly (olly syntax), powerpc, arm and java. For the intel syntax, rasm tries to use NASM or GAS. You can use the SYNTAX environment variable to choose your favorite syntax: intel or att.</p>
+<p>There are some examples in rasm&#39;s source directory to assemble a raw file using rasm from a file describing these opcodes.</p>
+<pre><code>$ cat selfstop<span class="hljs-preprocessor">.rasm</span>
+<span class="hljs-comment">;</span>
+<span class="hljs-comment">; Self-Stop shellcode written in rasm for x86</span>
+<span class="hljs-comment">;</span>
+<span class="hljs-comment">; --pancake</span>
+<span class="hljs-comment">;</span>
+
+<span class="hljs-preprocessor">.arch</span> x86
+<span class="hljs-preprocessor">.equ</span> base <span class="hljs-number">0x8048000</span>
+<span class="hljs-preprocessor">.org</span> <span class="hljs-number">0x8048000</span>  <span class="hljs-comment">; the offset where we inject the 5 byte jmp</span>
+
+<span class="hljs-label">selfstop:</span>
+  <span class="hljs-keyword">push</span> <span class="hljs-number">0x8048000</span>
+  pusha
+  <span class="hljs-keyword">mov</span> eax, <span class="hljs-number">20</span>
+  int <span class="hljs-number">0x80</span>
+
+  <span class="hljs-keyword">mov</span> ebx, eax 
+  <span class="hljs-keyword">mov</span> ecx, <span class="hljs-number">19</span>
+  <span class="hljs-keyword">mov</span> eax, <span class="hljs-number">37</span>
+  int <span class="hljs-number">0x80</span>
+  popa
+  <span class="hljs-keyword">ret</span>
+<span class="hljs-comment">;</span>
+<span class="hljs-comment">; The call injection</span>
+<span class="hljs-comment">;</span>
+
+  <span class="hljs-keyword">ret</span>
+
+
+
+[<span class="hljs-number">0x00000000</span>]&gt; e asm<span class="hljs-preprocessor">.bits</span> = <span class="hljs-number">32</span>
+[<span class="hljs-number">0x00000000</span>]&gt; wx `!rasm2 -f a<span class="hljs-preprocessor">.rasm</span>`
+[<span class="hljs-number">0x00000000</span>]&gt; pd <span class="hljs-number">20</span>
+       <span class="hljs-number">0x00000000</span>    <span class="hljs-number">6800800408</span>   <span class="hljs-keyword">push</span> <span class="hljs-number">0x8048000</span> <span class="hljs-comment">;  0x08048000 </span>
+       <span class="hljs-number">0x00000005</span>    <span class="hljs-number">60</span>           pushad
+       <span class="hljs-number">0x00000006</span>    b814000000   <span class="hljs-keyword">mov</span> eax, <span class="hljs-number">0x14</span> <span class="hljs-comment">;  0x00000014 </span>
+       <span class="hljs-number">0x0000000b</span>    cd80         int <span class="hljs-number">0x80</span>
+          syscall[<span class="hljs-number">0x80</span>][<span class="hljs-number">0</span>]=?
+       <span class="hljs-number">0x0000000d</span>    <span class="hljs-number">89</span>c3         <span class="hljs-keyword">mov</span> ebx, eax
+       <span class="hljs-number">0x0000000f</span>    b913000000   <span class="hljs-keyword">mov</span> ecx, <span class="hljs-number">0x13</span> <span class="hljs-comment">;  0x00000013 </span>
+       <span class="hljs-number">0x00000014</span>    b825000000   <span class="hljs-keyword">mov</span> eax, <span class="hljs-number">0x25</span> <span class="hljs-comment">;  0x00000025 </span>
+       <span class="hljs-number">0x00000019</span>    cd80         int <span class="hljs-number">0x80</span>
+          syscall[<span class="hljs-number">0x80</span>][<span class="hljs-number">0</span>]=?
+       <span class="hljs-number">0x0000001b</span>    <span class="hljs-number">61</span>           popad
+       <span class="hljs-number">0x0000001c</span>    c3           <span class="hljs-keyword">ret</span>
+       <span class="hljs-number">0x0000001d</span>    c3           <span class="hljs-keyword">ret</span>
+</code></pre><h2 id="14-2-disassemble">14.2 Disassemble</h2>
+<p>In the same way as rasm assembler works, giving the &#39;-d&#39; flag you can disassemble an hexpair string:</p>
+<pre><code>$ rasm2 <span class="hljs-attribute">-a</span> x86 <span class="hljs-attribute">-b</span> <span class="hljs-number">32</span> <span class="hljs-attribute">-d</span> <span class="hljs-string">'90'</span>
+nop
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch11_rabin2.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch18_rahash2.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>

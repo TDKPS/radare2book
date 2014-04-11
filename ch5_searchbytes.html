@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Searching bytes | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch6_disassembling.html" />
+        
+        
+        <link rel="prev" href="./ch4_visual_mode.html" />
+        
+
+        <meta property="og:title" content="Searching bytes | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="4" data-basepath="." data-revision="1397252382049">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch5_searchbytes.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 44.44444444444444%;min-width: 33.333333333333336%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter done new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter  new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter  new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter  new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="chapter-5-searching-bytes">Chapter 5: Searching bytes</h1>
+<p>The search engine of radare is based on the work done by esteve plus multiple features on top of it that allows multiple keyword searching with binary masks and automatic flagging of results.</p>
+<p>This powerful command is <code>/</code>.</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; /
+Usage: /[amx/] [arg]
+/ foo\x00       search <span class="hljs-keyword">for</span> <span class="hljs-keyword">string</span> <span class="hljs-string">`foo\0`</span>
+/w foo          search <span class="hljs-keyword">for</span> wide <span class="hljs-keyword">string</span> <span class="hljs-string">`f\0o\0o\0`</span>
+/wi foo         search <span class="hljs-keyword">for</span> wide <span class="hljs-keyword">string</span> ignoring <span class="hljs-keyword">case</span> <span class="hljs-string">`f\0o\0o\0`</span>
+/! ff           search <span class="hljs-keyword">for</span> first occurrence not matching
+/i foo          search <span class="hljs-keyword">for</span> <span class="hljs-keyword">string</span> <span class="hljs-string">`foo`</span> ignoring <span class="hljs-keyword">case</span>
+/e /E.F/i       <span class="hljs-keyword">match</span> regular <span class="hljs-keyword">expression</span>
+/x ff0033       search <span class="hljs-keyword">for</span> hex <span class="hljs-keyword">string</span>
+/x ff.<span class="hljs-number">.33</span>       search <span class="hljs-keyword">for</span> hex <span class="hljs-keyword">string</span> ignoring some nibbles
+/x ff43 ffd0    search <span class="hljs-keyword">for</span> hexpair with mask
+/d <span class="hljs-number">101112</span>       search <span class="hljs-keyword">for</span> a deltified sequence of bytes
+/!x <span class="hljs-number">00</span>          inverse hexa search (find first byte != <span class="hljs-number">0x00</span>)
+/c jmp [esp]    search <span class="hljs-keyword">for</span> asm code (see search.asmstr)
+/a jmp eax      assemble opcode and search its bytes
+/A              search <span class="hljs-keyword">for</span> AES expanded keys
+/r sym.printf   analyze opcode <span class="hljs-keyword">reference</span> an offset
+/R              search <span class="hljs-keyword">for</span> ROP gadgets
+/P              show offset of previous instruction
+/m magicfile    search <span class="hljs-keyword">for</span> matching magic <span class="hljs-keyword">file</span> (use blocksize)
+/p patternsize  search <span class="hljs-keyword">for</span> pattern of given <span class="hljs-keyword">size</span>
+/z <span class="hljs-keyword">min</span> <span class="hljs-keyword">max</span>      search <span class="hljs-keyword">for</span> strings of given <span class="hljs-keyword">size</span>
+/v[?<span class="hljs-number">248</span>] num    look <span class="hljs-keyword">for</span> a asm.bigendian <span class="hljs-number">32</span>bit value
+<span class="hljs-comment">//              repeat last search</span>
+/b              search backwards
+</code></pre><p>With radare everything is handled as a file, it doesn`t matters if it is a socket, a remote device, the process memory, etc..</p>
+<h2 id="5-1-basic-searchs">5.1 Basic searchs</h2>
+<p>A basic search for a plain string in a whole file would be something like:</p>
+<pre><code>$ r2 <span class="hljs-attribute">-c</span> <span class="hljs-string">"/ lib"</span> <span class="hljs-attribute">-q</span> /bin/ls
+Searching <span class="hljs-number">3</span> <span class="hljs-built_in">bytes</span> from <span class="hljs-number">0x00400000</span> <span class="hljs-keyword">to</span> <span class="hljs-number">0x0041ae08</span>: <span class="hljs-number">6</span>c <span class="hljs-number">69</span> <span class="hljs-number">62</span> 
+hits: <span class="hljs-number">9</span>
+<span class="hljs-number">0x00400239</span> hit0_0 <span class="hljs-string">"lib64/ld-linux-x86-64.so.2"</span>
+<span class="hljs-number">0x00400f19</span> hit0_1 <span class="hljs-string">"libselinux.so.1"</span>
+<span class="hljs-number">0x00400fae</span> hit0_2 <span class="hljs-string">"librt.so.1"</span>
+<span class="hljs-number">0x00400fc7</span> hit0_3 <span class="hljs-string">"libacl.so.1"</span>
+<span class="hljs-number">0x00401004</span> hit0_4 <span class="hljs-string">"libc.so.6"</span>
+<span class="hljs-number">0x004013ce</span> hit0_5 <span class="hljs-string">"libc_start_main"</span>
+<span class="hljs-number">0x00416542</span> hit0_6 <span class="hljs-string">"libs/"</span>
+<span class="hljs-number">0x00417160</span> hit0_7 <span class="hljs-string">"lib/xstrtol.c"</span>
+<span class="hljs-number">0x00417578</span> hit0_8 <span class="hljs-string">"lib"</span>
+</code></pre><p><code>r2 -q</code> // quiet mode (no prompt) and quit after -i</p>
+<p>As you can see, radare generates a <code>hit</code> flag for each search result found. You you can just use the <code>ps</code> command to visualize the strings at these offsets in this way:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; / ls
+<span class="hljs-keyword">...</span>
+[<span class="hljs-number">0x00404888</span>]&gt; ps @ hit0_0
+lseek
+</code></pre><p>We can also search wide-char strings (the ones containing zeros between each letter) using the <code>/w</code> in this way:</p>
+<pre><code>[0x00000000]&gt; /w Hello
+0 results found.
+</code></pre><p>It is also possible to mix hexadecimal scape sequences in the search string:</p>
+<pre><code><span class="hljs-special">[</span>0x00000000<span class="hljs-special">]</span>&gt; / <span class="hljs-command">\x</span>7FELF
+</code></pre><p>But if you want to perform an hexadecimal search you will probably prefer an hexpair input with <code>/x</code>:</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; /x <span class="hljs-number">7F</span>454C46
+</code></pre><p>Once the search is done, the results are stored in the <code>search</code> flag space.</p>
+<pre><code><span class="hljs-attr_selector">[0x00000000]</span>&gt; <span class="hljs-tag">f</span>
+0<span class="hljs-tag">x00000135</span> 512 <span class="hljs-tag">hit0_0</span>
+0<span class="hljs-tag">x00000b71</span> 512 <span class="hljs-tag">hit0_1</span>
+0<span class="hljs-tag">x00000bad</span> 512 <span class="hljs-tag">hit0_2</span>
+0<span class="hljs-tag">x00000bdd</span> 512 <span class="hljs-tag">hit0_3</span>
+0<span class="hljs-tag">x00000bfb</span> 512 <span class="hljs-tag">hit0_4</span>
+0<span class="hljs-tag">x00000f2a</span> 512 <span class="hljs-tag">hit0_5</span>
+</code></pre><p>To remove these flags, you can just use the <code>f@-hit*</code> command.</p>
+<p>Sometimes while working long time in the same file you will need to launch the last search more than once and you will probably prefer to use the <code>//</code> command instead of typing all the string again.</p>
+<pre><code><span class="hljs-attr_selector">[0x00000f2a]</span>&gt; <span class="hljs-comment">//     ; repeat last search</span>
+</code></pre><h2 id="5-2-configurating-the-searchs">5.2 Configurating the searchs</h2>
+<p>The search engine can be configured by the <code>e</code> interface:</p>
+<pre><code>Configuration:
+e cmd.hit = x         ; <span class="hljs-command"><span class="hljs-keyword">command</span> <span class="hljs-title">to</span> <span class="hljs-title">execute</span> <span class="hljs-title">on</span> <span class="hljs-title">every</span> <span class="hljs-title">search</span> <span class="hljs-title">hit</span></span>
+e search.distance = <span class="hljs-number">0</span> ; search <span class="hljs-keyword">string</span> distance
+e search.<span class="hljs-operator">in</span> = [foo]   ; boundaries <span class="hljs-built_in">to</span> raw, block, <span class="hljs-built_in">file</span>, section)
+e search.align = <span class="hljs-number">4</span>    ; only <span class="hljs-keyword">catch</span> aligned search hits
+e search.<span class="hljs-built_in">from</span> = <span class="hljs-number">0</span>     ; start address
+e search.<span class="hljs-built_in">to</span> = <span class="hljs-number">0</span>       ; <span class="hljs-function"><span class="hljs-keyword">end</span> <span class="hljs-title">address</span></span>
+e search.asmstr = <span class="hljs-number">0</span>   ; search <span class="hljs-keyword">string</span> instead <span class="hljs-operator">of</span> assembly
+e search.flags = <span class="hljs-constant">true</span> ; <span class="hljs-keyword">if</span> enabled store flags <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">keyword</span> <span class="hljs-title">hits</span></span>
+</code></pre><p><code>search.align</code> variable is used to determine that the only <code>valid</code> search hits must have to fit in this alignement. For example. you can use <code>e search.align=4</code> to get only the hits found in 4-byte aligned addresses.</p>
+<p>The <code>search.flag</code> boolean variable makes the engine setup flags when finding hits. If the search is stopped by the user with a ^C then a <code>search_stop</code> flag will be added.</p>
+<h2 id="5-3-pattern-search">5.3 Pattern search</h2>
+<p>The search command allows you to throw repeated pattern searchs against the IO backend to be able to identify repeated sequences of bytes without specifying them. The only property to perform this search is to manually define the minimum length of these patterns.</p>
+<p>Here`s an example:</p>
+<pre><code>[0x00000000]&gt; /p 10
+</code></pre><p>The output of the command will show the different patterns found and how many times they are repeated.</p>
+<h2 id="5-4-automatization">5.4 Automatization</h2>
+<p>The cmd.hit eval variable is used to define a command that will be executed when a hit is reached by the search engine. If you want to run more than one command use <code>;</code> or <code>. script-file-name</code> for including a file as a script.</p>
+<p>For example:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; e cmd.hit = p8 <span class="hljs-number">8</span>
+[<span class="hljs-number">0x00404888</span>]&gt; / <span class="hljs-keyword">lib</span>
+Searching <span class="hljs-number">3</span> bytes <span class="hljs-keyword">from</span> <span class="hljs-number">0x00400000</span> <span class="hljs-keyword">to</span> <span class="hljs-number">0x0041ae08</span>: <span class="hljs-number">6</span>c <span class="hljs-number">69</span> <span class="hljs-number">62</span> 
+hits: <span class="hljs-number">9</span>
+<span class="hljs-number">0x00400239</span> hit4_0 <span class="hljs-string">"lib64/ld-linux-x86-64.so.2"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00400f19</span> hit4_1 <span class="hljs-string">"libselinux.so.1"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00400fae</span> hit4_2 <span class="hljs-string">"librt.so.1"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00400fc7</span> hit4_3 <span class="hljs-string">"libacl.so.1"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00401004</span> hit4_4 <span class="hljs-string">"libc.so.6"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x004013ce</span> hit4_5 <span class="hljs-string">"libc_start_main"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00416542</span> hit4_6 <span class="hljs-string">"libs/"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00417160</span> hit4_7 <span class="hljs-string">"lib/xstrtol.c"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+<span class="hljs-number">0x00417578</span> hit4_8 <span class="hljs-string">"lib"</span>
+<span class="hljs-number">31</span>ed4989d15e4889
+</code></pre><h2 id="5-5-backward-search">5.5 Backward search</h2>
+<p>To search backward just use <code>\b</code></p>
+<h2 id="5-6-search-in-assembly">5.6 Search in assembly</h2>
+<p>If you want to search for a certain type of opcodes you can either use <code>/c</code> or <code>/a</code>:</p>
+<pre><code>/c <span class="hljs-keyword">jmp</span> [esp]    search for asm code
+
+
+[<span class="hljs-number">0x00404888</span>]&gt; /c <span class="hljs-keyword">jmp</span> qword [rdx]
+f hit_0 @ <span class="hljs-number">0x0040e50d</span>   <span class="hljs-preprocessor"># 2: jmp qword [rdx]</span>
+f hit_1 @ <span class="hljs-number">0x00418dbb</span>   <span class="hljs-preprocessor"># 2: jmp qword [rdx]</span>
+f hit_2 @ <span class="hljs-number">0x00418fcb</span>   <span class="hljs-preprocessor"># 3: jmp qword [rdx]</span>
+f hit_3 @ <span class="hljs-number">0x004196ab</span>   <span class="hljs-preprocessor"># 6: jmp qword [rdx]</span>
+f hit_4 @ <span class="hljs-number">0x00419bf3</span>   <span class="hljs-preprocessor"># 3: jmp qword [rdx]</span>
+f hit_5 @ <span class="hljs-number">0x00419c1b</span>   <span class="hljs-preprocessor"># 3: jmp qword [rdx]</span>
+f hit_6 @ <span class="hljs-number">0x00419c43</span>   <span class="hljs-preprocessor"># 3: jmp qword [rdx]</span>
+
+
+/a <span class="hljs-keyword">jmp</span> eax      assemble opcode <span class="hljs-keyword">and</span> search its bytes
+
+
+[<span class="hljs-number">0x00404888</span>]&gt; /a <span class="hljs-keyword">jmp</span> eax
+<span class="hljs-label">hits:</span> <span class="hljs-number">1</span>
+<span class="hljs-number">0x004048e7</span> hit3_0 ffe00f1f8000000000b8
+</code></pre><h2 id="5-7-searching-aes-keys">5.7 Searching AES keys</h2>
+<p>Thanks to Victor Mu<here be dragonz>oz i have added support to the algorithm he developed to find expanded AES keys. It runs the search from the current seek to the cfg.limit or the end of the file. You can always stop the search pressing <code>^C</code>.</p>
+<pre><code>$ <span class="hljs-built_in">sudo</span> r2 /dev/mem
+[<span class="hljs-number">0</span>x00000000]&gt; /A
+<span class="hljs-number">0</span> AES keys found
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch4_visual_mode.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch6_disassembling.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>

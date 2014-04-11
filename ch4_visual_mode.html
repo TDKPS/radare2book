@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Visual mode | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch5_searchbytes.html" />
+        
+        
+        <link rel="prev" href="./ch2_configuration.html" />
+        
+
+        <meta property="og:title" content="Visual mode | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="3" data-basepath="." data-revision="1397252382049">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch4_visual_mode.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 33.333333333333336%;min-width: 22.22222222222222%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter  new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter  new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter  new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter  new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_8">
+                    
+                        <h1 id="chapter-4-visual-mode">Chapter 4: Visual mode</h1>
+<p>The visual mode is a user-friendlier interface for the commandline prompt of radare which accepts hjkl movement keys, a cursor for selecting bytes and some keybindings to ease the use of the debugger.</p>
+<p>In this mode you can change the configuration in a easy way using the <code>e</code> (eval) key. Or just track the flags and walk thru the flagspaces pressing <code>t</code>.</p>
+<p>To get a help of all the keybindings hooked in visual mode you can press <code>?</code>:</p>
+<pre><code>Visual mode help:
+?        show this help <span class="hljs-keyword">or</span> manpage <span class="hljs-keyword">in</span> cursor mode
+_        enter <span class="hljs-keyword">the</span> hud
+.        seek <span class="hljs-keyword">to</span> program counter
+/        <span class="hljs-keyword">in</span> cursor mode search <span class="hljs-keyword">in</span> current block
+:cmd     <span class="hljs-command">run</span> radare command
+;[-]cmt  add/remove comment
+/*+-[]   change block size, [] = resize hex.cols
+&gt;||&lt;     seek aligned <span class="hljs-keyword">to</span> block size
+i/a/A    (i)nsert hex, (a)ssemble code, visual (A)ssembler
+b/B      toggle breakpoint / automatic block size
+c/C      toggle (c)ursor <span class="hljs-keyword">and</span> (C)olors
+d[f?]    define function, data, code, ..
+D        enter visual diff mode (<span class="hljs-keyword">set</span> diff.<span class="hljs-keyword">from</span>/<span class="hljs-keyword">to</span>)
+e        edit eval configuration variables
+f/F      <span class="hljs-keyword">set</span>/unset flag
+gG       go seek <span class="hljs-keyword">to</span> begin <span class="hljs-keyword">and</span> <span class="hljs-keyword">end</span> <span class="hljs-keyword">of</span> <span class="hljs-type">file</span> (<span class="hljs-number">0</span>-$s)
+hjkl     move <span class="hljs-keyword">around</span> (<span class="hljs-keyword">or</span> HJKL) (left-down-up-right)
+mK/'K    mark/go <span class="hljs-keyword">to</span> Key (any key)
+M        walk <span class="hljs-keyword">the</span> mounted filesystems
+n/N      seek next/prev function/flag/hit (scr.nkey)
+o        go/seek <span class="hljs-keyword">to</span> <span class="hljs-keyword">given</span> <span class="hljs-command">offset</span>
+p/P      rotate print modes (hex, disasm, debug, <span class="hljs-property">words</span>, buf)
+q        <span class="hljs-keyword">back</span> <span class="hljs-keyword">to</span> radare shell
+R        randomize color palette (ecr)
+sS       step / step <span class="hljs-keyword">over</span>
+t        track flags (browse symbols, functions..)
+T        browse anal info <span class="hljs-keyword">and</span> comments
+v        visual code analysis menu
+V/W      (V)iew graph using cmd.graph (agv?), open (W)ebUI
+uU       undo/redo seek
+x        show xrefs <span class="hljs-keyword">to</span> seek <span class="hljs-keyword">between</span> them
+yY       <span class="hljs-keyword">copy</span> <span class="hljs-keyword">and</span> paste selection
+z        toggle zoom mode
+Enter    follow address <span class="hljs-keyword">of</span> jump/call
+Function Keys: (See 'e key.'), defaults <span class="hljs-keyword">to</span>:
+  F2      toggle breakpoint
+  F7      single step
+  F8      step <span class="hljs-keyword">over</span>
+  F9      <span class="hljs-keyword">continue</span>
+</code></pre><p>From the visual mode you can toggle the insert and cursor modes with the <code>i</code> and <code>c</code> keys.</p>
+<h2 id="4-1-visual-cursor">4.1 Visual cursor</h2>
+<p>Pressing lowercase <code>c</code> makes the cursor appear or disappear. The cursor is used to select a range of bytes or just point to a byte to flag it (press <code>f</code> to create a new flag where the cursor points to)</p>
+<p>If you select a range of bytes press <code>i</code> and then a byte array to overwrite the selected bytes with the ones you choose in a circular copy way. For example:</p>
+<p><select 10 bytes in visual mode using upper hjkl></p>
+<p><press 'i' and then '12 34'>
+The 10 bytes selected will become: 12 34 12 34 12 34 12 34 12 34
+The byte range selection can be used together with the <code>d</code> key to change the data type of the selected bytes into a string, code or a byte array.</p>
+<p>That&#39;s useful to enhace the disassembly, add metadata or just align the code if there are bytes mixed with code.</p>
+<p>In cursor mode you can set the block size by simply moving it to the position you want and pressing <code>_</code>. Then change block size.</p>
+<h2 id="4-2-visual-insert">4.2 Visual insert</h2>
+<p>The insert mode allows you to write bytes at nibble-level like most common hexadecimal editors. In this mode you can press <code>&lt;tab&gt;</code> to switch between the hexa and ascii columns of the hexadecimal dump.</p>
+<p>To get back to the normal mode, just press <code>&lt;tab&gt;</code> to switch to the hexadecimal view and press <code>q</code>. (NOTE: if you press <code>q</code> in the ascii view...it will insert a <code>q</code> instead of quit this mode)</p>
+<p>There are other keys for inserting and writing data in visual mode. Basically by pressing <code>i</code> key you&#39;ll be prompted for an hexpair string or use <code>a</code> for writing assembly where the cursor points.</p>
+<h2 id="4-3-visual-xrefs">4.3 Visual xrefs</h2>
+<p>radare implements many user-friendly features for the visual interface to walk thru the assembly code. One of them is the <code>x</code> key that popups a menu for selecting the xref (data or code) against the current seek and then jump there. 
+For example when pressing x when looking at those XREF:</p>
+<pre><code>|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402b98</span> (fcn<span class="hljs-number">.004028</span>d0)
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402ba0</span> (fcn<span class="hljs-number">.004028</span>d0)                  
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402ba9</span> (fcn<span class="hljs-number">.004028</span>d0)       
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402bd5</span> (fcn<span class="hljs-number">.004028</span>d0)        
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402beb</span> (fcn<span class="hljs-number">.004028</span>d0)   
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402c25</span> (fcn<span class="hljs-number">.004028</span>d0)     
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402c31</span> (fcn<span class="hljs-number">.004028</span>d0)              
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402c40</span> (fcn<span class="hljs-number">.004028</span>d0)            
+|  ....--&gt; ; CODE (<span class="hljs-keyword">CALL</span>) XREF <span class="hljs-keyword">from</span> <span class="hljs-number">0x00402c51</span> (fcn<span class="hljs-number">.004028</span>d0)
+</code></pre><p>After pressing <code>x</code></p>
+<pre><code><span class="hljs-attr_selector">[GOTO XREF]</span>&gt;                                                                       
+<span class="hljs-attr_selector">[0]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402b98</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[1]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402ba0</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[2]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402ba9</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[3]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402bd5</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[4]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402beb</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[5]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402c25</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[6]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402c31</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[7]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402c40</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[8]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402c51</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)
+<span class="hljs-attr_selector">[9]</span> <span class="hljs-tag">CODE</span> (<span class="hljs-tag">CALL</span>) <span class="hljs-tag">XREF</span> 0<span class="hljs-tag">x00402c60</span> (<span class="hljs-tag">loc</span><span class="hljs-class">.00402b38</span>)    
+</code></pre><p>All the calls and jumps are numbered (1, 2, 3...) these numbers are the keybindings for seeking there from the visual mode.
+All the seek history is stored, by pressing <code>u</code> key you will go back in the seek history time :)</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch2_configuration.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch5_searchbytes.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>

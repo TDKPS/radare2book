@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Rabin2 | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch14_rasm2.html" />
+        
+        
+        <link rel="prev" href="./ch6_disassembling.html" />
+        
+
+        <meta property="og:title" content="Rabin2 | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="6" data-basepath="." data-revision="1397252382049">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch11_rabin2.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 66.66666666666667%;min-width: 55.55555555555556%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter done new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter done new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter done new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter  new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2">
+                    
+                        <h1 id="chapter-11-rabin2">Chapter 11: Rabin2</h1>
+<p>Under this bunny-arabic-like name, radare hides the power of a wonderful tool to handle binary files and get information to show it in the command line or import it into the core.</p>
+<p>Rabin2 is able to handle multiple file formats like Java CLASS, ELF, PE, MACH-O, etc.. and it is able to get symbol import/exports, library dependencies, strings of data sections, xrefs, address of entrypoint, sections, architecture type, etc.</p>
+<pre><code>$ rabin2 -h
+
+Usage: rabin2 [-ACdehHiIjlLMqrRsSvVxzZ] [-@ addr] [-a arch] [-b bits]
+              [-B addr] [-c F:C:D] [-f str] [-m addr] [-n str] [-N len]
+              [-o str] [-O str] file
+ -<span class="ruby">@ [addr]       show section, symbol <span class="hljs-keyword">or</span> import at addr
+</span> -<span class="ruby"><span class="hljs-constant">A</span>              list archs
+</span> -<span class="ruby">a [arch]       set arch (x86, arm, .. <span class="hljs-keyword">or</span> &lt;arch&gt;<span class="hljs-number">_</span>&lt;bits&gt;)
+</span> -<span class="ruby">b [bits]       set bits (<span class="hljs-number">32</span>, <span class="hljs-number">64</span> ...)
+</span> -<span class="ruby"><span class="hljs-constant">B</span> [addr]       override base address (pie bins)
+</span> -<span class="ruby">c [<span class="hljs-symbol">fmt:</span><span class="hljs-constant">C</span><span class="hljs-symbol">:D</span>]    create [elf,mach<span class="hljs-number">0</span>,pe] with <span class="hljs-constant">Code</span> <span class="hljs-keyword">and</span> <span class="hljs-constant">Data</span> hexpairs (see -a)
+</span> -<span class="ruby"><span class="hljs-constant">C</span>              list classes
+</span> -<span class="ruby">d              show debug/dwarf information
+</span> -<span class="ruby">e              entrypoint
+</span> -<span class="ruby">f [str]        select sub-bin named str
+</span> -<span class="ruby">g              same as -<span class="hljs-constant">SMRevsiz</span> (show all info)
+</span> -<span class="ruby">h              this help
+</span> -<span class="ruby"><span class="hljs-constant">H</span>              header fields
+</span> -<span class="ruby">i              imports (symbols imported from libraries)
+</span> -<span class="ruby"><span class="hljs-constant">I</span>              binary info
+</span> -<span class="ruby">j              output <span class="hljs-keyword">in</span> json
+</span> -<span class="ruby">l              linked libraries
+</span> -<span class="ruby"><span class="hljs-constant">L</span>              list supported bin plugins
+</span> -<span class="ruby">m [addr]       show source line at addr
+</span> -<span class="ruby"><span class="hljs-constant">M</span>              main (show address of main symbol)
+</span> -<span class="ruby">n [str]        show section, symbol <span class="hljs-keyword">or</span> import named str
+</span> -<span class="ruby"><span class="hljs-constant">N</span> [minlen]     force minimum number of chars per string (see -z)
+</span> -<span class="ruby">o [str]        output file/folder <span class="hljs-keyword">for</span> write operations (out by default)
+</span> -<span class="ruby"><span class="hljs-constant">O</span> [str]        write/extract operations (-<span class="hljs-constant">O</span> help)
+</span> -<span class="ruby">q              be quiet, just show fewer data
+</span> -<span class="ruby">r              radare output
+</span> -<span class="ruby"><span class="hljs-constant">R</span>              relocations
+</span> -<span class="ruby">s              symbols (exports)
+</span> -<span class="ruby"><span class="hljs-constant">S</span>              sections
+</span> -<span class="ruby">v              use vaddr <span class="hljs-keyword">in</span> radare output (<span class="hljs-keyword">or</span> show version <span class="hljs-keyword">if</span> no file)
+</span> -<span class="ruby">x              extract bins contained <span class="hljs-keyword">in</span> file
+</span> -<span class="ruby">z              strings (from data section)
+</span> -<span class="ruby">zz             strings (from raw bins [e bin.rawstr=<span class="hljs-number">1</span>])
+</span> -<span class="ruby"><span class="hljs-constant">Z</span>              guess size of binary program</span>
+</code></pre><h2 id="11-1-file-identification">11.1 File identification</h2>
+<p>The file identification is done through the -I flag, it will output information regarding binary class, encoding, OS, type, etc.</p>
+<pre><code>$ rabin2 -I /bin/ls
+file    /bin/ls
+<span class="hljs-class"><span class="hljs-keyword">type</span>    <span class="hljs-title">EXEC</span> (</span>Executable file)
+pic <span class="hljs-keyword">false</span>
+has_va  <span class="hljs-keyword">true</span>
+root    elf
+<span class="hljs-keyword">class</span>   ELF64
+lang    c
+arch    x86
+bits    <span class="hljs-number">64</span>
+machine AMD x86-<span class="hljs-number">64</span> architecture
+os  linux
+subsys  linux
+endian  little
+strip   <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">static</span>  <span class="hljs-keyword">false</span>
+linenum <span class="hljs-keyword">false</span>
+lsyms   <span class="hljs-keyword">false</span>
+relocs  <span class="hljs-keyword">false</span>
+rpath   NONE
+</code></pre><p>As it was said we can add the -r flag to use all this information in radare:</p>
+<pre><code>$ rabin2 -Ir /bin/ls
+e file<span class="hljs-preprocessor">.type</span>=elf
+e cfg<span class="hljs-preprocessor">.bigendian</span>=false
+e asm<span class="hljs-preprocessor">.os</span>=linux
+e asm<span class="hljs-preprocessor">.arch</span>=x86
+e anal<span class="hljs-preprocessor">.arch</span>=x86
+e asm<span class="hljs-preprocessor">.bits</span>=<span class="hljs-number">64</span>
+e asm<span class="hljs-preprocessor">.dwarf</span>=true
+</code></pre><h2 id="11-2-entrypoint">11.2 Entrypoint</h2>
+<p>The flag &quot;-e&quot; lets us know the program entrypoint.</p>
+<pre><code><span class="hljs-variable">$ </span>rabin2 -e /bin/ls
+[<span class="hljs-constant">Entrypoints</span>]
+addr=<span class="hljs-number">0x00004888</span> off=<span class="hljs-number">0x00004888</span> baddr=<span class="hljs-number">0x00000000</span>
+
+<span class="hljs-number">1</span> entrypoints
+
+<span class="hljs-variable">$ </span>rabin2 -er /bin/ls
+fs symbols
+f entry<span class="hljs-number">0</span> @ <span class="hljs-number">0x00004888</span>
+s entry<span class="hljs-number">0</span>
+</code></pre><h2 id="11-3-imports">11.3 Imports</h2>
+<p>Rabin2 is able to get all the imported objects, as well as their offset at the PLT, this information is quite useful, for example, to recognize wich function is called by a call instruction.</p>
+<pre><code>$ rabin2 -i /bin/ls |head
+[Imports]
+ordinal=<span class="hljs-number">001</span> plt=<span class="hljs-number">0</span>x000021b0 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=__ctype_toupper_loc
+ordinal=<span class="hljs-number">002</span> plt=<span class="hljs-number">0</span>x000021c0 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=__uflow
+ordinal=<span class="hljs-number">003</span> plt=<span class="hljs-number">0</span>x000021d0 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=getenv
+ordinal=<span class="hljs-number">004</span> plt=<span class="hljs-number">0</span>x000021e0 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=sigprocmask
+ordinal=<span class="hljs-number">005</span> plt=<span class="hljs-number">0</span>x000021f0 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=<span class="hljs-keyword">raise</span>
+ordinal=<span class="hljs-number">006</span> plt=<span class="hljs-number">0</span>x00002210 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=localtime
+ordinal=<span class="hljs-number">007</span> plt=<span class="hljs-number">0</span>x00002220 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=__mempcpy_chk
+ordinal=<span class="hljs-number">008</span> plt=<span class="hljs-number">0</span>x00002230 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=abort
+ordinal=<span class="hljs-number">009</span> plt=<span class="hljs-number">0</span>x00002240 bind=<span class="hljs-keyword">GLOBAL</span> <span class="hljs-keyword">type</span>=FUNC name=__errno_location
+(...)
+</code></pre><h2 id="11-4-symbols-exports-">11.4 Symbols (exports)</h2>
+<p>In rabin, symbols list works in a very similar way as exports do.</p>
+<pre><code>$ rabin2 -s /bin/ls | head
+[Symbols]
+addr=<span class="hljs-number">0x0021a610</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a610</span> ord=<span class="hljs-number">114</span> fwd=NONE sz=<span class="hljs-number">8</span> bind=<span class="hljs-keyword">GLOBAL</span> type=<span class="hljs-built_in">OBJECT</span> name=stdout
+addr=<span class="hljs-number">0x0021a600</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a600</span> ord=<span class="hljs-number">115</span> fwd=NONE sz=<span class="hljs-number">0</span> bind=<span class="hljs-keyword">GLOBAL</span> type=NOTYPE name=_edata
+addr=<span class="hljs-number">0x0021b388</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021b388</span> ord=<span class="hljs-number">116</span> fwd=NONE sz=<span class="hljs-number">0</span> bind=<span class="hljs-keyword">GLOBAL</span> type=NOTYPE name=_end
+addr=<span class="hljs-number">0x0021a600</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a600</span> ord=<span class="hljs-number">117</span> fwd=NONE sz=<span class="hljs-number">8</span> bind=<span class="hljs-keyword">GLOBAL</span> type=<span class="hljs-built_in">OBJECT</span> name=__progname
+addr=<span class="hljs-number">0x0021a630</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a630</span> ord=<span class="hljs-number">119</span> fwd=NONE sz=<span class="hljs-number">8</span> bind=UNKNOWN type=<span class="hljs-built_in">OBJECT</span> name=program_invocation_name
+addr=<span class="hljs-number">0x0021a600</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a600</span> ord=<span class="hljs-number">121</span> fwd=NONE sz=<span class="hljs-number">0</span> bind=<span class="hljs-keyword">GLOBAL</span> type=NOTYPE name=__bss_start
+addr=<span class="hljs-number">0x0021a630</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a630</span> ord=<span class="hljs-number">122</span> fwd=NONE sz=<span class="hljs-number">8</span> bind=<span class="hljs-keyword">GLOBAL</span> type=<span class="hljs-built_in">OBJECT</span> name=__progname_full
+addr=<span class="hljs-number">0x0021a600</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x0021a600</span> ord=<span class="hljs-number">123</span> fwd=NONE sz=<span class="hljs-number">8</span> bind=UNKNOWN type=<span class="hljs-built_in">OBJECT</span> name=program_invocation_short_name
+addr=<span class="hljs-number">0x00002178</span> <span class="hljs-keyword">off</span>=<span class="hljs-number">0x00002178</span> ord=<span class="hljs-number">124</span> fwd=NONE sz=<span class="hljs-number">0</span> bind=<span class="hljs-keyword">GLOBAL</span> type=FUNC name=_init
+</code></pre><p>With -r radare core can flag automatically all these symbols and define function and data blocks.</p>
+<pre><code>$ rabin2 -sr /bin/ls
+
+fs symbols
+Cd <span class="hljs-number">8</span> <span class="hljs-decorator">@ 0x0021a610</span>
+f sym.stdout <span class="hljs-number">8</span> <span class="hljs-number">0x0021a610</span>
+f sym._edata <span class="hljs-number">0</span> <span class="hljs-number">0x0021a600</span>
+f sym._end <span class="hljs-number">0</span> <span class="hljs-number">0x0021b388</span>
+Cd <span class="hljs-number">8</span> <span class="hljs-decorator">@ 0x0021a600</span>
+f sym.__progname <span class="hljs-number">8</span> <span class="hljs-number">0x0021a600</span>
+Cd <span class="hljs-number">8</span> <span class="hljs-decorator">@ 0x0021a630</span>
+f sym.program_invocation_name <span class="hljs-number">8</span> <span class="hljs-number">0x0021a630</span>
+f sym.__bss_start <span class="hljs-number">0</span> <span class="hljs-number">0x0021a600</span>
+</code></pre><h2 id="11-5-libraries">11.5 Libraries</h2>
+<p>Rabin2 can list the libraries used by a binary with the flag -l.</p>
+<pre><code>$ rabin2 -l /bin/ls
+[Linked libraries]
+libselinux<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+librt<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+libacl<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+libc<span class="hljs-preprocessor">.so</span><span class="hljs-number">.6</span>
+
+<span class="hljs-number">4</span> libraries
+</code></pre><p>If you compare the output of &#39;rabin2 -l&#39; and &#39;ldd&#39; you will notice that rabin will list less libraries than &#39;ldd&#39;. The reason is that rabin will not follow the dependencies of the listed libraries, it will just display the ones listed in the binary itself.</p>
+<h2 id="11-6-strings">11.6 Strings</h2>
+<p>The -z flag is used to list all the strings located in the section .rodata for ELF binaries, and .text for PE ones.</p>
+<pre><code>$ rabin2 -z /bin/ls |head
+addr=<span class="hljs-number">0x00012487</span> off=<span class="hljs-number">0x00012487</span> ordinal=<span class="hljs-number">000</span> sz=<span class="hljs-number">9</span> len=<span class="hljs-number">9</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=src/ls.c
+addr=<span class="hljs-number">0x00012490</span> off=<span class="hljs-number">0x00012490</span> ordinal=<span class="hljs-number">001</span> sz=<span class="hljs-number">26</span> len=<span class="hljs-number">26</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=sort_type != sort_version
+addr=<span class="hljs-number">0x000124aa</span> off=<span class="hljs-number">0x000124aa</span> ordinal=<span class="hljs-number">002</span> sz=<span class="hljs-number">5</span> len=<span class="hljs-number">5</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>= %lu
+addr=<span class="hljs-number">0x000124b0</span> off=<span class="hljs-number">0x000124b0</span> ordinal=<span class="hljs-number">003</span> sz=<span class="hljs-number">7</span> len=<span class="hljs-number">14</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>W <span class="hljs-built_in">string</span>=%*lu ?
+addr=<span class="hljs-number">0x000124ba</span> off=<span class="hljs-number">0x000124ba</span> ordinal=<span class="hljs-number">004</span> sz=<span class="hljs-number">8</span> len=<span class="hljs-number">8</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=%s %*s 
+addr=<span class="hljs-number">0x000124c5</span> off=<span class="hljs-number">0x000124c5</span> ordinal=<span class="hljs-number">005</span> sz=<span class="hljs-number">10</span> len=<span class="hljs-number">10</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=%*s, %*s 
+addr=<span class="hljs-number">0x000124cf</span> off=<span class="hljs-number">0x000124cf</span> ordinal=<span class="hljs-number">006</span> sz=<span class="hljs-number">5</span> len=<span class="hljs-number">5</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>= -&gt; 
+addr=<span class="hljs-number">0x000124d4</span> off=<span class="hljs-number">0x000124d4</span> ordinal=<span class="hljs-number">007</span> sz=<span class="hljs-number">17</span> len=<span class="hljs-number">17</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=cannot access %s
+addr=<span class="hljs-number">0x000124e5</span> off=<span class="hljs-number">0x000124e5</span> ordinal=<span class="hljs-number">008</span> sz=<span class="hljs-number">29</span> len=<span class="hljs-number">29</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=cannot read symbolic link %s
+addr=<span class="hljs-number">0x00012502</span> off=<span class="hljs-number">0x00012502</span> ordinal=<span class="hljs-number">009</span> sz=<span class="hljs-number">10</span> len=<span class="hljs-number">10</span> section=.rodata <span class="hljs-class"><span class="hljs-keyword">type</span>=</span>A <span class="hljs-built_in">string</span>=unlabeled
+</code></pre><p>With -r all this information is converted to radare2 commands, which will create a flag space called &quot;strings&quot; filled with flags for all those strings. 
+Furtheremore, it will redefine them as strings insted of code.</p>
+<pre><code>$ rabin2 -zr /bin/ls |head
+fs strings
+f str.src_ls.c <span class="hljs-number">9</span> @ <span class="hljs-number">0x00012487</span>
+Cs <span class="hljs-number">9</span> @ <span class="hljs-number">0x00012487</span>
+f str.sort_type__sort_version <span class="hljs-number">26</span> @ <span class="hljs-number">0x00012490</span>
+Cs <span class="hljs-number">26</span> @ <span class="hljs-number">0x00012490</span>
+f str._lu <span class="hljs-number">5</span> @ <span class="hljs-number">0x000124aa</span>
+Cs <span class="hljs-number">5</span> @ <span class="hljs-number">0x000124aa</span>
+f str.__lu_ <span class="hljs-number">14</span> @ <span class="hljs-number">0x000124b0</span>
+Cs <span class="hljs-number">7</span> @ <span class="hljs-number">0x000124b0</span>
+f str._s__s <span class="hljs-number">8</span> @ <span class="hljs-number">0x000124ba</span>
+(<span class="hljs-keyword">...</span>)
+</code></pre><h2 id="11-7-program-sections">11.7 Program sections</h2>
+<p>Rabin2 give us complete information about the program sections. We can know their index, offset, size, align, type and permissions, as we can see in the next example.</p>
+<pre><code>$ rabin2 -S /bin/ls
+ [Sections]
+idx=<span class="hljs-number">00</span> addr=<span class="hljs-number">0x00000238</span> off=<span class="hljs-number">0x00000238</span> sz=<span class="hljs-number">28</span> vsz=<span class="hljs-number">28</span> perm=-r-- name=<span class="hljs-preprocessor">.interp</span>
+idx=<span class="hljs-number">01</span> addr=<span class="hljs-number">0x00000254</span> off=<span class="hljs-number">0x00000254</span> sz=<span class="hljs-number">32</span> vsz=<span class="hljs-number">32</span> perm=-r-- name=<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.ABI</span>_tag
+idx=<span class="hljs-number">02</span> addr=<span class="hljs-number">0x00000274</span> off=<span class="hljs-number">0x00000274</span> sz=<span class="hljs-number">36</span> vsz=<span class="hljs-number">36</span> perm=-r-- name=<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.build</span>_id
+idx=<span class="hljs-number">03</span> addr=<span class="hljs-number">0x00000298</span> off=<span class="hljs-number">0x00000298</span> sz=<span class="hljs-number">104</span> vsz=<span class="hljs-number">104</span> perm=-r-- name=<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.hash</span>
+idx=<span class="hljs-number">04</span> addr=<span class="hljs-number">0x00000300</span> off=<span class="hljs-number">0x00000300</span> sz=<span class="hljs-number">3096</span> vsz=<span class="hljs-number">3096</span> perm=-r-- name=<span class="hljs-preprocessor">.dynsym</span>
+idx=<span class="hljs-number">05</span> addr=<span class="hljs-number">0x00000f18</span> off=<span class="hljs-number">0x00000f18</span> sz=<span class="hljs-number">1427</span> vsz=<span class="hljs-number">1427</span> perm=-r-- name=<span class="hljs-preprocessor">.dynstr</span>
+idx=<span class="hljs-number">06</span> addr=<span class="hljs-number">0x000014ac</span> off=<span class="hljs-number">0x000014ac</span> sz=<span class="hljs-number">258</span> vsz=<span class="hljs-number">258</span> perm=-r-- name=<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.version</span>
+idx=<span class="hljs-number">07</span> addr=<span class="hljs-number">0x000015b0</span> off=<span class="hljs-number">0x000015b0</span> sz=<span class="hljs-number">160</span> vsz=<span class="hljs-number">160</span> perm=-r-- name=<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.version</span>_r
+idx=<span class="hljs-number">08</span> addr=<span class="hljs-number">0x00001650</span> off=<span class="hljs-number">0x00001650</span> sz=<span class="hljs-number">168</span> vsz=<span class="hljs-number">168</span> perm=-r-- name=<span class="hljs-preprocessor">.rela</span><span class="hljs-preprocessor">.dyn</span>
+idx=<span class="hljs-number">09</span> addr=<span class="hljs-number">0x000016f8</span> off=<span class="hljs-number">0x000016f8</span> sz=<span class="hljs-number">2688</span> vsz=<span class="hljs-number">2688</span> perm=-r-- name=<span class="hljs-preprocessor">.rela</span><span class="hljs-preprocessor">.plt</span>
+idx=<span class="hljs-number">10</span> addr=<span class="hljs-number">0x00002178</span> off=<span class="hljs-number">0x00002178</span> sz=<span class="hljs-number">26</span> vsz=<span class="hljs-number">26</span> perm=-r-<span class="hljs-built_in">x</span> name=<span class="hljs-preprocessor">.init</span>
+idx=<span class="hljs-number">11</span> addr=<span class="hljs-number">0x000021a0</span> off=<span class="hljs-number">0x000021a0</span> sz=<span class="hljs-number">1808</span> vsz=<span class="hljs-number">1808</span> perm=-r-<span class="hljs-built_in">x</span> name=<span class="hljs-preprocessor">.plt</span>
+idx=<span class="hljs-number">12</span> addr=<span class="hljs-number">0x000028b0</span> off=<span class="hljs-number">0x000028b0</span> sz=<span class="hljs-number">64444</span> vsz=<span class="hljs-number">64444</span> perm=-r-<span class="hljs-built_in">x</span> name=<span class="hljs-preprocessor">.text</span>
+idx=<span class="hljs-number">13</span> addr=<span class="hljs-number">0x0001246c</span> off=<span class="hljs-number">0x0001246c</span> sz=<span class="hljs-number">9</span> vsz=<span class="hljs-number">9</span> perm=-r-<span class="hljs-built_in">x</span> name=<span class="hljs-preprocessor">.fini</span>
+idx=<span class="hljs-number">14</span> addr=<span class="hljs-number">0x00012480</span> off=<span class="hljs-number">0x00012480</span> sz=<span class="hljs-number">20764</span> vsz=<span class="hljs-number">20764</span> perm=-r-- name=<span class="hljs-preprocessor">.rodata</span>
+idx=<span class="hljs-number">15</span> addr=<span class="hljs-number">0x0001759c</span> off=<span class="hljs-number">0x0001759c</span> sz=<span class="hljs-number">1820</span> vsz=<span class="hljs-number">1820</span> perm=-r-- name=<span class="hljs-preprocessor">.eh</span>_frame_hdr
+idx=<span class="hljs-number">16</span> addr=<span class="hljs-number">0x00017cb8</span> off=<span class="hljs-number">0x00017cb8</span> sz=<span class="hljs-number">8460</span> vsz=<span class="hljs-number">8460</span> perm=-r-- name=<span class="hljs-preprocessor">.eh</span>_frame
+idx=<span class="hljs-number">17</span> addr=<span class="hljs-number">0x00019dd8</span> off=<span class="hljs-number">0x00019dd8</span> sz=<span class="hljs-number">8</span> vsz=<span class="hljs-number">8</span> perm=-rw- name=<span class="hljs-preprocessor">.init</span>_array
+idx=<span class="hljs-number">18</span> addr=<span class="hljs-number">0x00019de0</span> off=<span class="hljs-number">0x00019de0</span> sz=<span class="hljs-number">8</span> vsz=<span class="hljs-number">8</span> perm=-rw- name=<span class="hljs-preprocessor">.fini</span>_array
+idx=<span class="hljs-number">19</span> addr=<span class="hljs-number">0x00019de8</span> off=<span class="hljs-number">0x00019de8</span> sz=<span class="hljs-number">8</span> vsz=<span class="hljs-number">8</span> perm=-rw- name=<span class="hljs-preprocessor">.jcr</span>
+idx=<span class="hljs-number">20</span> addr=<span class="hljs-number">0x00019df0</span> off=<span class="hljs-number">0x00019df0</span> sz=<span class="hljs-number">512</span> vsz=<span class="hljs-number">512</span> perm=-rw- name=<span class="hljs-preprocessor">.dynamic</span>
+idx=<span class="hljs-number">21</span> addr=<span class="hljs-number">0x00019ff0</span> off=<span class="hljs-number">0x00019ff0</span> sz=<span class="hljs-number">16</span> vsz=<span class="hljs-number">16</span> perm=-rw- name=<span class="hljs-preprocessor">.got</span>
+idx=<span class="hljs-number">22</span> addr=<span class="hljs-number">0x0001a000</span> off=<span class="hljs-number">0x0001a000</span> sz=<span class="hljs-number">920</span> vsz=<span class="hljs-number">920</span> perm=-rw- name=<span class="hljs-preprocessor">.got</span><span class="hljs-preprocessor">.plt</span>
+idx=<span class="hljs-number">23</span> addr=<span class="hljs-number">0x0001a3a0</span> off=<span class="hljs-number">0x0001a3a0</span> sz=<span class="hljs-number">608</span> vsz=<span class="hljs-number">608</span> perm=-rw- name=<span class="hljs-preprocessor">.data</span>
+idx=<span class="hljs-number">24</span> addr=<span class="hljs-number">0x0001a600</span> off=<span class="hljs-number">0x0001a600</span> sz=<span class="hljs-number">3464</span> vsz=<span class="hljs-number">3464</span> perm=-rw- name=<span class="hljs-preprocessor">.bss</span>
+idx=<span class="hljs-number">25</span> addr=<span class="hljs-number">0x0001a600</span> off=<span class="hljs-number">0x0001a600</span> sz=<span class="hljs-number">8</span> vsz=<span class="hljs-number">8</span> perm=---- name=<span class="hljs-preprocessor">.gnu</span>_debuglink
+idx=<span class="hljs-number">26</span> addr=<span class="hljs-number">0x0001a608</span> off=<span class="hljs-number">0x0001a608</span> sz=<span class="hljs-number">254</span> vsz=<span class="hljs-number">254</span> perm=---- name=<span class="hljs-preprocessor">.shstrtab</span>
+
+<span class="hljs-number">27</span> sections
+</code></pre><p>Also, using -r, radare will flag the beginning and end of each section, as well as comment each one with the previous information.</p>
+<pre><code>$ rabin2 -Sr /bin/ls
+fs sections
+S <span class="hljs-number">0x00000238</span> <span class="hljs-number">0x00000238</span> <span class="hljs-number">0x0000001c</span> <span class="hljs-number">0x0000001c</span> <span class="hljs-preprocessor">.interp</span> <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.interp</span> <span class="hljs-number">28</span> <span class="hljs-number">0x00000238</span>
+f section_end.<span class="hljs-preprocessor">.interp</span> <span class="hljs-number">0</span> <span class="hljs-number">0x00000254</span>
+CC [<span class="hljs-number">00</span>] va=<span class="hljs-number">0x00000238</span> pa=<span class="hljs-number">0x00000238</span> sz=<span class="hljs-number">28</span> vsz=<span class="hljs-number">28</span> rwx=-r-- <span class="hljs-preprocessor">.interp</span> @ <span class="hljs-number">0x00000238</span>
+S <span class="hljs-number">0x00000254</span> <span class="hljs-number">0x00000254</span> <span class="hljs-number">0x00000020</span> <span class="hljs-number">0x00000020</span> <span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.ABI</span>_tag <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.ABI</span>_tag <span class="hljs-number">32</span> <span class="hljs-number">0x00000254</span>
+f section_end.<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.ABI</span>_tag <span class="hljs-number">0</span> <span class="hljs-number">0x00000274</span>
+CC [<span class="hljs-number">01</span>] va=<span class="hljs-number">0x00000254</span> pa=<span class="hljs-number">0x00000254</span> sz=<span class="hljs-number">32</span> vsz=<span class="hljs-number">32</span> rwx=-r-- <span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.ABI</span>_tag @ <span class="hljs-number">0x00000254</span>
+S <span class="hljs-number">0x00000274</span> <span class="hljs-number">0x00000274</span> <span class="hljs-number">0x00000024</span> <span class="hljs-number">0x00000024</span> <span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.build</span>_id <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.build</span>_id <span class="hljs-number">36</span> <span class="hljs-number">0x00000274</span>
+f section_end.<span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.build</span>_id <span class="hljs-number">0</span> <span class="hljs-number">0x00000298</span>
+CC [<span class="hljs-number">02</span>] va=<span class="hljs-number">0x00000274</span> pa=<span class="hljs-number">0x00000274</span> sz=<span class="hljs-number">36</span> vsz=<span class="hljs-number">36</span> rwx=-r-- <span class="hljs-preprocessor">.note</span><span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.build</span>_id @ <span class="hljs-number">0x00000274</span>
+S <span class="hljs-number">0x00000298</span> <span class="hljs-number">0x00000298</span> <span class="hljs-number">0x00000068</span> <span class="hljs-number">0x00000068</span> <span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.hash</span> <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.hash</span> <span class="hljs-number">104</span> <span class="hljs-number">0x00000298</span>
+f section_end.<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.hash</span> <span class="hljs-number">0</span> <span class="hljs-number">0x00000300</span>
+CC [<span class="hljs-number">03</span>] va=<span class="hljs-number">0x00000298</span> pa=<span class="hljs-number">0x00000298</span> sz=<span class="hljs-number">104</span> vsz=<span class="hljs-number">104</span> rwx=-r-- <span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.hash</span> @ <span class="hljs-number">0x00000298</span>
+S <span class="hljs-number">0x00000300</span> <span class="hljs-number">0x00000300</span> <span class="hljs-number">0x00000c18</span> <span class="hljs-number">0x00000c18</span> <span class="hljs-preprocessor">.dynsym</span> <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.dynsym</span> <span class="hljs-number">3096</span> <span class="hljs-number">0x00000300</span>
+f section_end.<span class="hljs-preprocessor">.dynsym</span> <span class="hljs-number">0</span> <span class="hljs-number">0x00000f18</span>
+CC [<span class="hljs-number">04</span>] va=<span class="hljs-number">0x00000300</span> pa=<span class="hljs-number">0x00000300</span> sz=<span class="hljs-number">3096</span> vsz=<span class="hljs-number">3096</span> rwx=-r-- <span class="hljs-preprocessor">.dynsym</span> @ <span class="hljs-number">0x00000300</span>
+S <span class="hljs-number">0x00000f18</span> <span class="hljs-number">0x00000f18</span> <span class="hljs-number">0x00000593</span> <span class="hljs-number">0x00000593</span> <span class="hljs-preprocessor">.dynstr</span> <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.dynstr</span> <span class="hljs-number">1427</span> <span class="hljs-number">0x00000f18</span>
+f section_end.<span class="hljs-preprocessor">.dynstr</span> <span class="hljs-number">0</span> <span class="hljs-number">0x000014ab</span>
+CC [<span class="hljs-number">05</span>] va=<span class="hljs-number">0x00000f18</span> pa=<span class="hljs-number">0x00000f18</span> sz=<span class="hljs-number">1427</span> vsz=<span class="hljs-number">1427</span> rwx=-r-- <span class="hljs-preprocessor">.dynstr</span> @ <span class="hljs-number">0x00000f18</span>
+S <span class="hljs-number">0x000014ac</span> <span class="hljs-number">0x000014ac</span> <span class="hljs-number">0x00000102</span> <span class="hljs-number">0x00000102</span> <span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.version</span> <span class="hljs-number">4</span>
+f section.<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.version</span> <span class="hljs-number">258</span> <span class="hljs-number">0x000014ac</span>
+f section_end.<span class="hljs-preprocessor">.gnu</span><span class="hljs-preprocessor">.version</span> <span class="hljs-number">0</span> <span class="hljs-number">0x000015ae</span>
+(...)
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch6_disassembling.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch14_rasm2.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>

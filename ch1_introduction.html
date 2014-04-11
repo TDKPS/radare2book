@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Introduction | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch2_configuration.html" />
+        
+        
+        <link rel="prev" href="./index.html" />
+        
+
+        <meta property="og:title" content="Introduction | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="1" data-basepath="." data-revision="1397252382049">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch1_introduction.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 11.11111111111111%;min-width: 0%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter  new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter  new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter  new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter  new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter  new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter  new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1">
+                    
+                        <h1 id="chapter-1-introduction">Chapter 1: Introduction</h1>
+<p>This book aims to cover most usage aspects of radare2. A framework for reverse engineering and analyzing binaries.</p>
+<p>--pancake</p>
+<h2 id="1-1-history">1.1 History</h2>
+<p>The radare project started in February of 2006 aiming to provide a Free and simple command line interface for an hexadecimal editor supporting 64 bit offsets to make searches and recovering data from hard-disks.</p>
+<p>Since then, the project has grown with the aim changed to provide a complete framework for analyzing binaries with some basic *NIX concepts in mind like &#39;everything is a file&#39;, &#39;small programs that interact together using stdin/out&#39; or &#39;keep it simple&#39;.</p>
+<p>It&#39;s mostly a single-person project, but some contributions (in source, patches, ideas or species) have been made and are really appreciated.</p>
+<p>The project is composed by an hexadecimal editor as the central point of the project with assembler/disassembler, code analysis, scripting features, analysis and graphs of code and data, easy unix integration, ..</p>
+<h2 id="1-2-overview">1.2 Overview</h2>
+<p>Nowadays the project is composed by a set of small utilities that can be used together or independently from the command line:</p>
+<h3 id="radare2">radare2</h3>
+<p>The core of the hexadecimal editor and debugger. Allows to open any kind of file from different IO access like disk, network, kernel plugins, remote devices, debugged processes, ... and handle any of them as if they were a simple plain file.</p>
+<p>Implements an advanced command line interface for moving around the file, analyzing data, disassembling, binary patching, data comparision, searching, replacing, scripting with ruby, python, lua and perl, ...</p>
+<h3 id="rabin2">rabin2</h3>
+<p>Extracts information from executable binaries like ELF, PE, Java CLASS, MACH-O. It&#39;s used from the core to get exported symbols, imports, file information, xrefs, library dependencies, sections, ...</p>
+<h3 id="rasm2">rasm2</h3>
+<p>Commandline assembler and disassembler for multiple architectures (intel[32,64], mips, arm, powerpc, java, msil, ...)</p>
+<pre><code>$ rasm2 <span class="hljs-operator">-a</span> java <span class="hljs-string">'nop'</span>
+<span class="hljs-number">00</span>
+
+$ rasm2 <span class="hljs-operator">-a</span> x86 <span class="hljs-operator">-d</span> <span class="hljs-string">'90'</span>
+nop
+
+$ rasm2 <span class="hljs-operator">-a</span> x86 -b <span class="hljs-number">32</span> <span class="hljs-string">'mov eax, 33'</span>
+b821000000
+
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'push eax;nop;nop'</span> | rasm2 <span class="hljs-operator">-f</span> -
+<span class="hljs-number">5090</span>
+</code></pre><h3 id="rahash2">rahash2</h3>
+<p>Implementation of a block-based rahash for small text strings or large disks, supporting multiple algorithms like md4, md5, crc16, crc32, sha1, sha256, sha384, sha512, par, xor, xorpair, mod255, hamdist or entropy.</p>
+<p>It can be used to check the integrity or track changes between big files, memory dumps or disks.</p>
+<h3 id="radiff2">radiff2</h3>
+<p>Binary diffing utility with multiple algorithms implemented inside. Supports byte-level or delta diffing for binary files and code-analysis diffing to find changes in basic code blocks from radare code analysis or IDA ones using the idc2rdb rsc script.</p>
+<h3 id="rafind2">rafind2</h3>
+<p>rafind2 is a program to find byte patterns into files</p>
+<h3 id="ragg2">ragg2</h3>
+<p>Ragg2 is a frontend for r_egg, compile programs into tiny binaries for x86-32/64 and arm.</p>
+<h3 id="rarun2">rarun2</h3>
+<p>Rarun2 is used as a launcher for running programs with different environment, arguments, permissions, directories and overridden default file descriptors. It can be useful for :</p>
+<ul>
+<li>Crackme</li>
+<li>Fuzzing</li>
+<li>Test suite</li>
+</ul>
+<h2 id="1-3-getting-radare">1.3 Getting radare</h2>
+<p>You can get radare from the website <a href="http://radare.org/" target="_blank">http://radare.org/</a> or Github repo <a href="https://github.com/radare/radare2" target="_blank">https://github.com/radare/radare2</a></p>
+<p>There are binary packages for multiple operating systems and GNU/Linux distributions (ubuntu, maemo, gentoo, windows, iphone, etc..) But I hardly encourage you to get the sources and compile them yourself to better understand the dependencies and have the source code and examples more accessible.</p>
+<p>I try to publish a new stable release every month and sometimes publish nightly tarballs.</p>
+<p>But as always the best way to use a software is to go upstream and pull the development repository which in radare is commonly more stable than the &#39;stable&#39; releases O:)</p>
+<p>To do this you will need Git and type:</p>
+<pre><code><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/radare</span><span class="hljs-regexp">/radare2.git</span>
+</code></pre><p>This will probably take a while, so take a coffee and continue reading this paper.</p>
+<p>To update your local copy of the repository you will have to type this command in the root of the recently created &#39;radare&#39; directory.</p>
+<pre><code><span class="hljs-variable">$ </span>git pull
+</code></pre><p>If you have local modifications of the source, you can revert them with:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">git</span> <span class="hljs-comment">reset</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">hard</span> <span class="hljs-comment">HEAD</span>
+</code></pre><p>Or just feed me with a patch</p>
+<pre><code><span class="hljs-variable">$ </span>git diff &gt; radare-foo.patch
+</code></pre><h2 id="1-4-compilation-and-portability">1.4 Compilation and portability</h2>
+<p>Currently the core of radare can be compiled in many systems, and architectures, but the main development is done on GNU/Linux and GCC. But it is known to compile with TCC and SunStudio.</p>
+<p>People usually wants to use radare as a debugger for reverse engineering, and this is a bit more restrictive portability issue, so if the debugger is not ported to your favorite platform, please, notify it to me or just disable the debugger layer with --without-debugger in the ./configure stage.</p>
+<p>Nowadays the debugger layer can be used on Windows, GNU/Linux (intel32, intel64, mips, arm), FreeBSD, NetBSD, OpenBSD (intel32, intel64) and there are plans for Solaris and OSX. And there are some IO plugins to use gdb, gdbremote or wine as backends.</p>
+<p>The build system based on ACR/GMAKE.</p>
+<pre><code><span class="hljs-char">$ </span>./configure --prefix=/usr
+<span class="hljs-char">$ </span>gmake
+<span class="hljs-char">$ </span>sudo gmake install
+</code></pre><p>But there is a simple script to do that automatically:</p>
+<pre><code><span class="hljs-variable">$ </span>sys/install.sh
+</code></pre><h2 id="1-5-windows-compilation">1.5 Windows compilation</h2>
+<p>The easy way to compile things for windows is using mingw32. The w32 builds distributed in the radare homepage are generated from a GNU/Linux box using mingw32 and they are tested with wine.</p>
+<p>To compile type:</p>
+<pre><code>$ CC<span class="hljs-subst">=</span>i486<span class="hljs-attribute">-mingw32</span><span class="hljs-attribute">-gcc</span> <span class="hljs-built_in">.</span>/configure <span class="hljs-subst">--</span>enable<span class="hljs-attribute">-w32</span> <span class="hljs-subst">--</span>without<span class="hljs-attribute">-gui</span>
+$ make
+$ make w32dist
+$ zip <span class="hljs-attribute">-r</span> w32<span class="hljs-attribute">-build</span><span class="hljs-built_in">.</span>zip w32<span class="hljs-attribute">-build</span>
+</code></pre><p>The &#39;i486-mingw32-gcc&#39; compiler is the one I have in my box, you will probably need to change this. Mingw32 will generate a native console application for windows.</p>
+<p>Another possible way to compile radare on w32 is using cygwin, which I dont really recommend at all because of the problems related to the cygwin librarires makes the program quite hard to be debugged in case of problems.</p>
+<h2 id="1-6-commandline-flags">1.6 Commandline flags</h2>
+<p>The core accepts multiple flags from the command line to change some configuration or start with different options.</p>
+<p>Here&#39;s the help message:</p>
+<pre><code>$ radare2 -h
+Usage: r2 [-dDwntLqv] [-P patch] [-p prj] [-a arch] [-b bits] [-i file] [-s addr] [-B blocksize] [-c cmd] [-e k=v] file|-
+
+   -<span class="ruby">a [arch]    set asm.arch
+</span>   -<span class="ruby"><span class="hljs-constant">A</span>           run <span class="hljs-string">'aa'</span> command to analyze all referenced code
+</span>   -<span class="ruby">b [bits]    set asm.bits
+</span>   -<span class="ruby"><span class="hljs-constant">B</span> [baddr]   set base address <span class="hljs-keyword">for</span> <span class="hljs-constant">PIE</span> binaries
+</span>   -<span class="ruby">c <span class="hljs-string">'cmd..'</span>   execute radare command
+</span>   -<span class="ruby"><span class="hljs-constant">C</span>           file is <span class="hljs-symbol">host:</span>port (<span class="hljs-keyword">alias</span> <span class="hljs-keyword">for</span> -c+=<span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/%s/cmd</span><span class="hljs-regexp">/)
+</span></span>   -<span class="ruby">d           use <span class="hljs-string">'file'</span> as a program <span class="hljs-keyword">for</span> debug
+</span>   -<span class="ruby"><span class="hljs-constant">D</span> [backend] enable debug mode (e cfg.debug=<span class="hljs-keyword">true</span>)
+</span>   -<span class="ruby">e k=v       evaluate config var
+</span>   -<span class="ruby">f           block size = file size
+</span>   -<span class="ruby">h, -hh      show help message, -hh <span class="hljs-keyword">for</span> long
+</span>   -<span class="ruby">i [file]    run script file
+</span>   -<span class="ruby">k [kernel]  set asm.os variable <span class="hljs-keyword">for</span> asm <span class="hljs-keyword">and</span> anal
+</span>   -<span class="ruby">l [lib]     load plugin file
+</span>   -<span class="ruby"><span class="hljs-constant">L</span>           list supported <span class="hljs-constant">IO</span> plugins
+</span>   -<span class="ruby">m [addr]    map file at given address
+</span>   -<span class="ruby">n           disable analysis
+</span>   -<span class="ruby"><span class="hljs-constant">N</span>           disable user settings
+</span>   -<span class="ruby">q           quiet mode (no promt) <span class="hljs-keyword">and</span> quit after -i
+</span>   -<span class="ruby">p [prj]     set project file
+</span>   -<span class="ruby"><span class="hljs-constant">P</span> [file]    apply rapatch file <span class="hljs-keyword">and</span> quit
+</span>   -<span class="ruby">s [addr]    initial seek
+</span>   -<span class="ruby"><span class="hljs-constant">S</span>           start r2 <span class="hljs-keyword">in</span> sandbox mode
+</span>   -<span class="ruby">t           load rabin2 info <span class="hljs-keyword">in</span> thread
+</span>   -<span class="ruby">v, -<span class="hljs-constant">V</span>       show radare2 version (-<span class="hljs-constant">V</span> show lib versions)
+</span>   -<span class="ruby">w           open file <span class="hljs-keyword">in</span> write mode</span>
+</code></pre><h2 id="1-7-basic-usage">1.7 Basic usage</h2>
+<p>Lot of people ping me some times for a sample usage session of radare to help to understand how the shell works and how to perform the most common tasks like disassembling, seeking, binary patching or debugging.</p>
+<p>I hardly encourage you to read the rest of this book to help you understand better how everything works and enhace your skills, the learning curve of radare is usually a bit harder at the beggining, but after an hour of using it you will easily understand how most of the things work and how to get them cooperate together :)</p>
+<p>For walking thru the binary file you will use three different kind of basic actions: seek, print and alterate.</p>
+<p>To &#39;seek&#39; there&#39;s an specific command abreviated as <code>s</code> than accepts an expression as argument that can be something like <code>10</code>, <code>+0x25</code> or <code>[0x100+ptr_table]</code>. If you are working with block-based files you may prefer to set up the block size to 4K or the size required with the command <code>b</code> and move forward or backward at seeks aligned to the block size using the <code>&gt;</code> and <code>&lt;</code> commands.</p>
+<p>The &#39;print&#39; command aliased as <code>p</code>, accepts a second letter to specify the print mode selected. The most common ones are <code>px</code> for printing in hexadecimal, <code>pd</code> for disassembling.</p>
+<p>To &#39;write&#39; open the file with <code>radare -w</code>. This should be specified while opening the file.
+You can use the <code>w</code> command to write strings or <code>wx</code> for hexpair strings:</p>
+<pre><code>&gt; w hello world         ; <span class="hljs-keyword">string</span>
+&gt; wx <span class="hljs-number">90</span> <span class="hljs-number">90</span> <span class="hljs-number">90</span> <span class="hljs-number">90</span>        ; hexpairs
+&gt; wa jmp <span class="hljs-number">0</span>x8048140      ; assemble
+&gt; wf <span class="hljs-keyword">inline</span>.bin         ; <span class="hljs-keyword">write</span> contents <span class="hljs-keyword">of</span> <span class="hljs-keyword">file</span>
+</code></pre><p>Appending a <code>?</code> to the command you will get the help message of it. (p? for example)</p>
+<p>Enter the visual mode pressing <code>V&lt;enter&gt;</code>, and return to the prompt using the <code>q</code> key.</p>
+<p>In the visual mode you should use hjkl keys which are the default ones for scrolling (like left,down,up,right). So entering in cursor mode (<code>c</code>) you will be able select bytes if using the shift together with HJKL.</p>
+<p>In the visual mode you can insert (alterate bytes) pressing <code>i</code> and then <tab> to switch between the hex or string column. Pressing <code>q</code> in hex panel to return into the visual mode.</p>
+<h2 id="1-8-command-format">1.8 Command format</h2>
+<p>The format of the commands looks something like that:</p>
+<pre><code>[<span class="hljs-link_label">.</span>][<span class="hljs-link_reference">times</span>][<span class="hljs-link_label">cmd</span>][<span class="hljs-link_reference">~grep</span>][<span class="hljs-link_label">@[@iter</span>]addr!size][|&gt;pipe] ; ...
+</code></pre><p>Commands are named with single chars [a-zA-Z]. So, if we prefix the command with a number. The following command will be executed as many times as we specify.</p>
+<pre><code>px    <span class="hljs-array"># run px</span>
+<span class="hljs-number">3</span>px   <span class="hljs-array"># run </span><span class="hljs-number">3</span> times <span class="hljs-string">'px'</span>
+</code></pre><p>The <code>!</code> prefix is used to scape to the shell. If a single exclamation is used then commands will be send to the system() hook defined in the loaded IO plugin. This is used, for example in the ptrace IO plugin which accepts debugger commands from this interface.</p>
+<p>Some examples:</p>
+<pre><code>ds                    ; call debugger <span class="hljs-string">'step'</span> <span class="hljs-command"><span class="hljs-keyword">command</span></span>
+px <span class="hljs-number">200</span> @ esp          ; show <span class="hljs-number">200</span> hex <span class="hljs-keyword">bytes</span> <span class="hljs-keyword">at</span> esp
+pc &gt; <span class="hljs-built_in">file</span>.c           ; dump buffer <span class="hljs-keyword">as</span> <span class="hljs-operator">a</span> C <span class="hljs-keyword">byte</span> array <span class="hljs-built_in">to</span> <span class="hljs-built_in">file</span>
+wx <span class="hljs-number">90</span> @@ sym.*        ; <span class="hljs-built_in">write</span> <span class="hljs-operator">a</span> nop <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">every</span> <span class="hljs-title">symbol</span></span>
+pd <span class="hljs-number">2000</span> | grep eax    ; grep opcodes <span class="hljs-keyword">using</span> <span class="hljs-string">'eax'</span> register
+px <span class="hljs-number">20</span> ; pd <span class="hljs-number">3</span> ; px <span class="hljs-number">40</span>  ; multiple commands <span class="hljs-operator">in</span> <span class="hljs-operator">a</span> single <span class="hljs-built_in">line</span>
+</code></pre><p>The <code>@</code> character is used to specify a temporary offset where the command at the left will be executed. </p>
+<p>The <code>~</code> character enables the internal grep which can be used to filter the output of any command. The usage is quite simple:</p>
+<pre><code>pd <span class="hljs-number">20</span>~<span class="hljs-keyword">call</span>            ; disassemble <span class="hljs-number">20</span> instructions <span class="hljs-keyword">and</span> grep <span class="hljs-keyword">for</span> <span class="hljs-comment">'call'</span>
+</code></pre><p>We can either grep for columns or rows:</p>
+<pre><code>pd <span class="hljs-number">20</span>~<span class="hljs-keyword">call</span>:<span class="hljs-number">0</span>          ; <span class="hljs-keyword">get</span> first row
+pd <span class="hljs-number">20</span>~<span class="hljs-keyword">call</span>:<span class="hljs-number">1</span>          ; <span class="hljs-keyword">get</span> <span class="hljs-built_in">second</span> row
+</code></pre><p>Or even combine them:</p>
+<pre><code>pd <span class="hljs-number">20</span>~call[<span class="hljs-number">0</span>]:<span class="hljs-number">0</span>       ; grep <span class="hljs-keyword">first</span> column <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> <span class="hljs-keyword">first</span> row matching <span class="hljs-string">'call'</span>
+</code></pre><p>The use of internal grep is a key feature for scripting radare, because is used to iterate over list of offsets or data processed from disassembly, ranges, or any other command. Here&#39;s an example of usage. See macros section (iterators) for more information.</p>
+<h2 id="1-9-expressions">1.9 Expressions</h2>
+<p>The expressions are mathematical representations of a 64 bit numeric value which can be displayed in different formats, compared or used at any command as a numeric argument. They support multiple basic arithmetic operations and some binary and boolean ones. The command used to evaluate these math expressions is the <code>?</code>. Here there are some examples:</p>
+<pre><code><span class="hljs-attr_selector">[0xB7F9D810]</span>&gt; ? 0<span class="hljs-tag">x8048000</span>
+134512640 0<span class="hljs-tag">x8048000</span> 01001100000 128<span class="hljs-class">.0M</span> 804000<span class="hljs-pseudo">:0000</span> 134512640 00000000 134512640<span class="hljs-class">.0</span> 0<span class="hljs-class">.000000</span>  
+<span class="hljs-attr_selector">[0xB7F9D810]</span>&gt; ? 0<span class="hljs-tag">x8048000</span>+34
+134512674 0<span class="hljs-tag">x8048022</span> 01001100042 128<span class="hljs-class">.0M</span> 804000<span class="hljs-pseudo">:0022</span> 134512674 00100010 134512674<span class="hljs-class">.0</span> 0<span class="hljs-class">.000000</span>  
+<span class="hljs-attr_selector">[0xB7F9D810]</span>&gt; ? 0<span class="hljs-tag">x8048000</span>+0<span class="hljs-tag">x34</span>
+134512692 0<span class="hljs-tag">x8048034</span> 01001100064 128<span class="hljs-class">.0M</span> 804000<span class="hljs-pseudo">:0034</span> 134512692 00110100 134512692<span class="hljs-class">.0</span> 0<span class="hljs-class">.000000</span>  
+<span class="hljs-attr_selector">[0xB7F9D810]</span>&gt; ? 1+2+3<span class="hljs-tag">-4</span>*3
+<span class="hljs-tag">-6</span> 0<span class="hljs-tag">xfffffffffffffffa</span> 01777777777777777777772 17179869183<span class="hljs-class">.0G</span> <span class="hljs-tag">fffff000</span><span class="hljs-pseudo">:0ffa</span> <span class="hljs-tag">-6</span>   
+</code></pre><p>The supported arithmetic expressions supported are:</p>
+<pre><code><span class="hljs-bullet">+ </span>: addition
+<span class="hljs-bullet">- </span>: substraction
+<span class="hljs-bullet">* </span>: multiply
+/ : division
+% : modulus
+<span class="hljs-blockquote">&gt; : shift right</span>
+<span class="xml"><span class="hljs-tag">&lt; <span class="hljs-attribute">:</span> <span class="hljs-attribute">shift</span> <span class="hljs-attribute">left</span></span></span>
+</code></pre><p>The binary expressions should be scapped:</p>
+<pre><code>\| : logical <span class="hljs-keyword">OR</span> <span class="hljs-comment">// ("? 0001010 | 0101001")</span>
+\&amp; : logical <span class="hljs-keyword">AND</span>
+</code></pre><p>The values can be numbers in many formats:</p>
+<pre><code><span class="hljs-number">0x033</span>   : hexadecimal
+<span class="hljs-number">3334</span>    : decimal
+sym.fo  : resolve flag offset
+<span class="hljs-number">10</span>K     : KBytes  <span class="hljs-number">10</span><span class="hljs-variable">*1024</span>
+<span class="hljs-number">10</span>M     : MBytes  <span class="hljs-number">10</span><span class="hljs-variable">*1024</span><span class="hljs-variable">*1024</span>
+</code></pre><p>There are other special syntaxes for the expressions. Here&#39;s for example some of them:</p>
+<pre><code>?<span class="hljs-variable">@?</span>    or stype <span class="hljs-variable">@@</span>?      ; misc <span class="hljs-keyword">help</span> <span class="hljs-keyword">for</span> <span class="hljs-string">'@'</span> (seek), <span class="hljs-string">'~'</span> (grep) (see ~??)
+?<span class="hljs-variable">$?</span>           ; show available <span class="hljs-string">'$'</span> variables
+<span class="hljs-variable">$$</span>            ; here (current virtual seek)
+<span class="hljs-variable">$l</span>            ; opcode length
+<span class="hljs-variable">$s</span>            ; <span class="hljs-keyword">file</span> <span class="hljs-keyword">size</span>
+<span class="hljs-variable">$j</span>            ; jump address (e.g. jmp <span class="hljs-number">0x10</span>, jz <span class="hljs-number">0x10</span> =&gt; <span class="hljs-number">0x10</span>)
+<span class="hljs-variable">$f</span>            ; jump fail address (e.g. jz <span class="hljs-number">0x10</span> =&gt; next instruction)
+<span class="hljs-variable">$m</span>            ; opcode <span class="hljs-keyword">memory</span> <span class="hljs-keyword">reference</span> (e.g. mov eax,[<span class="hljs-number">0x10</span>] =&gt; <span class="hljs-number">0x10</span>)
+</code></pre><p>For example:</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; <span class="hljs-symbol">:</span>? <span class="hljs-variable">$m</span> + <span class="hljs-variable">$l</span>
+<span class="hljs-number">140293837812900</span> <span class="hljs-number">0x7f98b45df4a4</span> <span class="hljs-number">03771426427372244</span> <span class="hljs-number">130658.0</span>G <span class="hljs-number">8</span><span class="hljs-symbol">b45d000:</span><span class="hljs-number">04</span>a4 <span class="hljs-number">140293837812900</span> <span class="hljs-number">10100100</span> <span class="hljs-number">140293837812900.0</span> -<span class="hljs-number">0</span>.<span class="hljs-number">000000</span>
+
+
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; <span class="hljs-symbol">:pd</span> <span class="hljs-number">1</span> @ +<span class="hljs-variable">$l</span>
+<span class="hljs-number">0x4A13B8C2</span>   call <span class="hljs-number">0x4a13c000</span>   
+</code></pre><h2 id="1-10-rax">1.10 Rax</h2>
+<p>The <code>rax</code> utility comes with the radare framework and aims to be a minimalistic expression evaluator for the shell useful for making base conversions easily between floating point values, hexadecimal representations, hexpair strings to ascii, octal to integer. It supports endianness and can be used as a shell if no arguments given.</p>
+<pre><code>$ rax2 -h
+
+Usage: rax2 [options] [expr ...]
+int   -&gt;  hex           ;  rax2 10
+hex   -&gt;  int           ;  rax2 0xa
+-<span class="ruby">int  -&gt;  hex           ;  rax2 -<span class="hljs-number">77</span>
+</span>-<span class="ruby">hex  -&gt;  int           ;  rax2 <span class="hljs-number">0xffffffb3</span>
+</span>int   -&gt;  bin           ;  rax2 b30
+bin   -&gt;  int           ;  rax2 1010d
+float -&gt;  hex           ;  rax2 3.33f
+hex   -&gt;  float         ;  rax2 Fx40551ed8
+oct   -&gt;  hex           ;  rax2 35o
+hex   -&gt;  oct           ;  rax2 Ox12 (O is a letter)
+bin   -&gt;  hex           ;  rax2 1100011b
+hex   -&gt;  bin           ;  rax2 Bx63
+raw   -&gt;  hex           ;  rax2 -S &lt; /binfile
+hex   -&gt;  raw           ;  rax2 -s 414141
+-<span class="ruby">b    binstr -&gt; bin     ;  rax2 -b <span class="hljs-number">01000101</span> <span class="hljs-number">01110110</span>
+</span>-<span class="ruby"><span class="hljs-constant">B</span>    keep base         ;  rax2 -<span class="hljs-constant">B</span> <span class="hljs-number">33</span>+<span class="hljs-number">3</span> -&gt; <span class="hljs-number">36</span>
+</span>-<span class="ruby">d    force integer     ;  rax2 -d <span class="hljs-number">3</span> -&gt; <span class="hljs-number">3</span> instead of <span class="hljs-number">0x3</span>
+</span>-<span class="ruby">e    swap endianness   ;  rax2 -e <span class="hljs-number">0x33</span>
+</span>-<span class="ruby">f    floating point    ;  rax2 -f <span class="hljs-number">6.3</span>+<span class="hljs-number">2.1</span>
+</span>-<span class="ruby">h    help              ;  rax2 -h
+</span>-<span class="ruby">k    randomart         ;  rax2 -k <span class="hljs-number">0x34</span> <span class="hljs-number">1020304050</span>
+</span>-<span class="ruby">n    binary number     ;  rax2 -e <span class="hljs-number">0x1234</span>   <span class="hljs-comment"># 34120000</span>
+</span>-<span class="ruby">s    hexstr -&gt; raw     ;  rax2 -s <span class="hljs-number">43</span> <span class="hljs-number">4</span>a <span class="hljs-number">50</span>
+</span>-<span class="ruby"><span class="hljs-constant">S</span>    raw -&gt; hexstr     ;  rax2 -<span class="hljs-constant">S</span> &lt; <span class="hljs-regexp">/bin/ls</span> &gt; ls.hex
+</span>-<span class="ruby">t    tstamp -&gt; str     ;  rax2 -t <span class="hljs-number">1234567890</span>
+</span>-<span class="ruby">x    hash string       ;  rax2 -x linux osx
+</span>-<span class="ruby">u    units             ;  rax2 -u <span class="hljs-number">389289238</span> <span class="hljs-comment"># 317.0M</span>
+</span>-<span class="ruby">v    version           ;  rax2 -<span class="hljs-constant">V</span></span>
+</code></pre><p>Some examples:</p>
+<pre><code><span class="hljs-char">$ </span>rax2 <span class="hljs-number">3</span>+<span class="hljs-number">0x80</span>
+<span class="hljs-number">0x83</span>
+
+<span class="hljs-char">$ </span>rax2 <span class="hljs-number">0x80</span>+<span class="hljs-number">3</span> 
+<span class="hljs-number">131</span>
+
+<span class="hljs-char">$ </span>echo <span class="hljs-number">0x80</span>+<span class="hljs-number">3</span> | rax2
+<span class="hljs-number">131</span>
+
+<span class="hljs-char">$ </span>rax2 -s <span class="hljs-number">4142</span>
+<span class="hljs-class">AB</span>
+
+<span class="hljs-char">$ </span>rax2 -<span class="hljs-class">S</span> <span class="hljs-class">AB</span> 
+<span class="hljs-number">4142</span>
+
+<span class="hljs-char">$ </span>rax2 -<span class="hljs-class">S</span> &lt; bin.foo
+...
+
+<span class="hljs-char">$ </span>rax2 -e <span class="hljs-number">33</span> 
+<span class="hljs-number">0x21000000</span>
+
+<span class="hljs-char">$ </span>rax2 -e <span class="hljs-number">0x21000000</span> 
+<span class="hljs-number">33</span>
+
+<span class="hljs-char">$ </span>rax2 -k <span class="hljs-number">90203010</span>
++--[<span class="hljs-number">0x10302090</span>]---+
+|<span class="hljs-class">Eo</span>. .            |
+| . . . .         |
+<span class="hljs-localvars">|      o          |</span>
+|       .         |
+|        <span class="hljs-class">S</span>        |
+|                 |
+|                 |
+|                 |
+|                 |
++-----------------+
+</code></pre><h2 id="1-11-basic-debugger-session">1.11 Basic debugger session</h2>
+<p>To start debugging a program use the <code>-d</code> flag and append the PID or the program path with arguments.</p>
+<pre><code>$ r2 <span class="hljs-operator">-d</span> /bin/ls
+</code></pre><p>The debugger will fork and load the <code>ls</code> program in memory stopping the execution in the <code>ld.so</code>, so don&#39;t expect to see the entrypoint or the mapped libraries at this point. To change this you can define a new &#39;break entry point&#39; adding <code>e dbg.bep=entry</code> or <code>dbg.bep=main</code> to your .radarerc.</p>
+<p>But take care on this, because some malware or programs can execute code before the main.</p>
+<p>Now the debugger prompt should appear and if you press <code>enter</code> ( null command ) the basic view of the process will be displayed with the stack dump, general purpose registers and disassembly from current program counter (eip on intel).</p>
+<p>Here&#39;s a list of the most common commands for the debugger:</p>
+<pre><code>&gt; d?          ; <span class="hljs-built_in">get</span> help <span class="hljs-command"><span class="hljs-keyword">on</span> <span class="hljs-title">debugger</span> <span class="hljs-title">commands</span></span>
+&gt; ds <span class="hljs-number">3</span>        ; step <span class="hljs-number">3</span> times
+&gt; db <span class="hljs-number">0x8048920</span>  ; setup <span class="hljs-operator">a</span> <span class="hljs-built_in">breakpoint</span>
+&gt; db -<span class="hljs-number">0x8048920</span> ; remove <span class="hljs-operator">a</span> <span class="hljs-built_in">breakpoint</span>
+&gt; dc          ; continue <span class="hljs-built_in">process</span> execution
+&gt; dcs        ; continue <span class="hljs-keyword">until</span> syscall
+&gt; dd            ; manipulate <span class="hljs-built_in">file</span> descriptors
+&gt; dm          ; show <span class="hljs-built_in">process</span> maps
+&gt; dmp A S rwx  ; change page <span class="hljs-keyword">at</span> A <span class="hljs-operator">with</span> size S protection permissions
+&gt; dr eax=<span class="hljs-number">33</span> ; <span class="hljs-built_in">set</span> register <span class="hljs-built_in">value</span>. eax = <span class="hljs-number">33</span>
+</code></pre><p>The easiest way to use the debugger is from the Visual mode, so, you will no need to remember much commands or keep states in your mind.</p>
+<pre><code><span class="hljs-attr_selector">[0xB7F0C8C0]</span>&gt; <span class="hljs-tag">V</span>
+</code></pre><p>After entering this command an hexdump of the current eip will be showed. Now press <code>p</code> one time to get into the debugger view. You can press <code>p</code> and <code>P</code> to rotate thru the most commonly used print modes.</p>
+<p>Use F7 or <code>s</code> to step into and F8 or <code>S</code> to step over.</p>
+<p>With the <code>c</code> key you will toggle the cursor mode and being able to select range of bytes to nop them or set breakpoints using the <code>F2</code> key.</p>
+<p>In the visual mode you can enter commands with <code>:</code> to dump buffer contents like</p>
+<pre><code>x <span class="hljs-decorator">@ esi</span>
+</code></pre><p>To get the help in the visual mode press <code>?</code>.</p>
+<p>At this point the most common commands are !reg that can be used to get or set values for the general purpose registers. You can also manipulate the hardware and extended/floating registers. </p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch2_configuration.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>
