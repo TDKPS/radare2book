@@ -1,0 +1,904 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Basic Commands | Radare2book</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Maijin">
+        <meta name="description" content="Book generated using GitBook">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./ch4_visual_mode.html" />
+        
+        
+        <link rel="prev" href="./ch2_configuration.html" />
+        
+
+        <meta property="og:title" content="Basic Commands | Radare2book">
+        <meta property="og:site_name" content="Radare2book">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/Maijin">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+        
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+        
+    </head>
+    <body>
+        
+<div class="book" data-github="Maijin/radare2book" data-level="3" data-basepath="." data-revision="1397252913838">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="https://github.com/Maijin/radare2book" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://github.com/Maijin/radare2book/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/Maijin/radare2book/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+
+
+    <!-- Title -->
+    <h1><a href="./" >Radare2book</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        <li>
+            <a href="https://github.com/Maijin" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/Maijin/radare2book/edit/master/ch3_basic_commands.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="ch1_introduction.html">
+                
+                <a href="./ch1_introduction.html">
+                    <i class="fa fa-check"></i> <b>1)</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="ch2_configuration.html">
+                
+                <a href="./ch2_configuration.html">
+                    <i class="fa fa-check"></i> <b>2)</b> Configuration
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="ch3_basic_commands.html">
+                
+                <a href="./ch3_basic_commands.html">
+                    <i class="fa fa-check"></i> <b>3)</b> Basic Commands
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="ch4_visual_mode.html">
+                
+                <a href="./ch4_visual_mode.html">
+                    <i class="fa fa-check"></i> <b>4)</b> Visual mode
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="ch5_searchbytes.html">
+                
+                <a href="./ch5_searchbytes.html">
+                    <i class="fa fa-check"></i> <b>5)</b> Searching bytes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="ch6_disassembling.html">
+                
+                <a href="./ch6_disassembling.html">
+                    <i class="fa fa-check"></i> <b>6)</b> Disassembling
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="ch11_rabin2.html">
+                
+                <a href="./ch11_rabin2.html">
+                    <i class="fa fa-check"></i> <b>7)</b> Rabin2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="ch14_rasm2.html">
+                
+                <a href="./ch14_rasm2.html">
+                    <i class="fa fa-check"></i> <b>8)</b> Rasm2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="ch18_rahash2.html">
+                
+                <a href="./ch18_rahash2.html">
+                    <i class="fa fa-check"></i> <b>9)</b> Rahash2
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="ch20_debugger.html">
+                
+                <a href="./ch20_debugger.html">
+                    <i class="fa fa-check"></i> <b>10)</b> Debugger
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body" tabindex="-1">
+        <div class="body-inner">
+            <div class="page-wrapper">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 40%;min-width: 30%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./ch1_introduction.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 10%;"></a>
+    
+        <a href="./ch20_debugger.html" title="Debugger" class="chapter done " data-progress="10" style="left: 20%;"></a>
+    
+        <a href="./ch2_configuration.html" title="Configuration" class="chapter done new-chapter" data-progress="2" style="left: 30%;"></a>
+    
+        <a href="./ch3_basic_commands.html" title="Basic Commands" class="chapter done new-chapter" data-progress="3" style="left: 40%;"></a>
+    
+        <a href="./ch4_visual_mode.html" title="Visual mode" class="chapter  new-chapter" data-progress="4" style="left: 50%;"></a>
+    
+        <a href="./ch5_searchbytes.html" title="Searching bytes" class="chapter  new-chapter" data-progress="5" style="left: 60%;"></a>
+    
+        <a href="./ch6_disassembling.html" title="Disassembling" class="chapter  new-chapter" data-progress="6" style="left: 70%;"></a>
+    
+        <a href="./ch11_rabin2.html" title="Rabin2" class="chapter  new-chapter" data-progress="7" style="left: 80%;"></a>
+    
+        <a href="./ch14_rasm2.html" title="Rasm2" class="chapter  new-chapter" data-progress="8" style="left: 90%;"></a>
+    
+        <a href="./ch18_rahash2.html" title="Rahash2" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="chapter-3-basic-commands">Chapter 3: Basic commands</h1>
+<p>The basic set of commands in radare can be mostly grouped by action, and they should be easy to remember and short. This is why they are grouped with a single character, subcommands or related commands are described with a second character. For example <code>/ foo</code> for searching plain strings or <code>/x 90 90</code> to look for hexpair strings.</p>
+<p>The format of the commands (as explained in &#39;Command format&#39; chapter) looks something like that:</p>
+<pre><code>[[.][times][cmd][~grep][@[@iter]addr!size][|&gt;pipe] ; ...
+
+&gt; <span class="hljs-number">3</span>s +<span class="hljs-number">1024</span>    ; seeks three times <span class="hljs-number">1024</span> from the current seek
+</code></pre><p>If the command starts with <code>!</code> the string is passed to the plugin hadling the current IO (the debugger for example), if no one handles it calls to posix_system() which is a shell escape, you can prefix the command with two <code>!!</code>.</p>
+<pre><code>&gt; !help       ; handled <span class="hljs-keyword">by</span> <span class="hljs-operator">the</span> debugger <span class="hljs-operator">or</span> <span class="hljs-built_in">shell</span>
+&gt; !!ls        ; runs ls <span class="hljs-operator">in</span> <span class="hljs-operator">the</span> <span class="hljs-built_in">shell</span>
+</code></pre><p>The [arg] argument depends on the command, but most of them take a number as argument to specify the number of bytes to work on instead of block size. Other commands accept math expressions, or strings.</p>
+<pre><code>&gt; px <span class="hljs-number">0x17</span>     ; show <span class="hljs-number">0x17</span> <span class="hljs-keyword">bytes</span> <span class="hljs-operator">in</span> hexa <span class="hljs-keyword">at</span> current <span class="hljs-built_in">seek</span>
+&gt; s base+<span class="hljs-number">0x33</span> ; seeks <span class="hljs-built_in">to</span> flag <span class="hljs-string">'base'</span> plus <span class="hljs-number">0x33</span>
+&gt; / lib       ; search <span class="hljs-keyword">for</span> <span class="hljs-string">'lib'</span> <span class="hljs-keyword">string</span>.
+</code></pre><p>The <code>@</code> is used to specify a temporal seek where the command is executed. This is quite useful to not seeking all the time.</p>
+<pre><code>&gt; p8 <span class="hljs-number">10</span> @ <span class="hljs-number">0x4010</span>  ; show <span class="hljs-number">10</span> <span class="hljs-keyword">bytes</span> <span class="hljs-keyword">at</span> <span class="hljs-built_in">offset</span> <span class="hljs-number">0x4010</span>
+&gt; f patata @ <span class="hljs-number">0x10</span> ; <span class="hljs-built_in">set</span> <span class="hljs-string">'patata'</span> flag <span class="hljs-keyword">at</span> <span class="hljs-built_in">offset</span> <span class="hljs-number">0x10</span>
+</code></pre><p>Using <code>@@</code> you can execute a single command on a list of flags matching the glob:</p>
+<pre><code>&gt; s <span class="hljs-number">0</span>
+&gt; / lib             ; search <span class="hljs-string">'lib'</span> <span class="hljs-keyword">string</span>
+&gt; p8 <span class="hljs-number">20</span> @@ hit0_*   ; show <span class="hljs-number">20</span> hexpairs <span class="hljs-keyword">at</span> <span class="hljs-keyword">each</span> search hit
+</code></pre><p>The <code>&gt;</code> is used to pipe the output of the command to a file (truncating to 0 if exist)</p>
+<pre><code>&gt; pr &gt; dump.bin   ; dump <span class="hljs-string">'raw'</span> <span class="hljs-keyword">bytes</span> <span class="hljs-operator">of</span> current block <span class="hljs-built_in">to</span> <span class="hljs-string">'dump.bin'</span> <span class="hljs-built_in">file</span>
+&gt; f  &gt; flags.txt  ; dump flag list <span class="hljs-built_in">to</span> <span class="hljs-string">'flags.txt'</span>
+</code></pre><p>The <code>|</code> pipe is used to dump the output of the command to another program.</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; f | <span class="hljs-keyword">grep</span> section | <span class="hljs-keyword">grep</span> text
+<span class="hljs-number">0x0805f3b0</span> <span class="hljs-number">512</span> section._text
+<span class="hljs-number">0x080d24b0</span> <span class="hljs-number">512</span> section._text_end
+</code></pre><p>Using the <code>;</code> chars you can concatenate multiple commands in a single line:</p>
+<pre><code><span class="hljs-blockquote">&gt; px ; dr</span>
+</code></pre><h2 id="3-1-seeking">3.1 Seeking</h2>
+<p>The command <code>s</code> is used to seek. It accepts a math expression as argument that can be composed by shift operations, basic math ones and memory access.</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; <span class="hljs-keyword">s</span>?
+Usage: <span class="hljs-keyword">s</span>[+-] [addr]
+<span class="hljs-keyword">s</span>                 <span class="hljs-keyword">print</span> current address
+<span class="hljs-keyword">s</span> <span class="hljs-number">0x320</span>           <span class="hljs-keyword">seek</span> to this address
+<span class="hljs-keyword">s</span>-                undo <span class="hljs-keyword">seek</span>
+<span class="hljs-keyword">s</span>+                <span class="hljs-keyword">redo</span> <span class="hljs-keyword">seek</span>
+<span class="hljs-keyword">s</span>*                list undo <span class="hljs-keyword">seek</span> history
+<span class="hljs-keyword">s</span>++               <span class="hljs-keyword">seek</span> blocksize bytes forward
+<span class="hljs-keyword">s</span>--               <span class="hljs-keyword">seek</span> blocksize bytes backward
+<span class="hljs-keyword">s</span>+ <span class="hljs-number">512</span>            <span class="hljs-keyword">seek</span> <span class="hljs-number">512</span> bytes forward
+<span class="hljs-keyword">s</span>- <span class="hljs-number">512</span>            <span class="hljs-keyword">seek</span> <span class="hljs-number">512</span> bytes backward
+sg/sG             <span class="hljs-keyword">seek</span> begin (sg) <span class="hljs-keyword">or</span> end (sG) of section <span class="hljs-keyword">or</span> file
+<span class="hljs-keyword">s</span>.hexoff          Seek honoring a base from core-&gt;offset
+sa [[+-]a] [asz]  <span class="hljs-keyword">seek</span> asz (<span class="hljs-keyword">or</span> bsize) aligned to addr
+sn/sp             <span class="hljs-keyword">seek</span> <span class="hljs-keyword">next</span>/prev scr.nkey
+<span class="hljs-keyword">s</span>/ DATA           search <span class="hljs-keyword">for</span> <span class="hljs-keyword">next</span> occurrence of <span class="hljs-string">'DATA'</span>
+<span class="hljs-keyword">s</span>/<span class="hljs-keyword">x</span> <span class="hljs-number">9091</span>          search <span class="hljs-keyword">for</span> <span class="hljs-keyword">next</span> occurrence of \x9<span class="hljs-number">0</span>\x91
+sb                <span class="hljs-keyword">seek</span> aligned to bb start
+so [num]          <span class="hljs-keyword">seek</span> to N <span class="hljs-keyword">next</span> opcode(<span class="hljs-keyword">s</span>)
+sf                <span class="hljs-keyword">seek</span> to <span class="hljs-keyword">next</span> function (f-&gt;addr+f-&gt;size)
+sC str            <span class="hljs-keyword">seek</span> to comment matching <span class="hljs-keyword">given</span> string
+sr pc             <span class="hljs-keyword">seek</span> to register
+
+&gt; <span class="hljs-number">3</span><span class="hljs-keyword">s</span>++        ; <span class="hljs-number">3</span> <span class="hljs-keyword">times</span> block-seeking
+&gt; <span class="hljs-keyword">s</span> <span class="hljs-number">10</span>+<span class="hljs-number">0x80</span>   ; <span class="hljs-keyword">seek</span> at <span class="hljs-number">0x80</span>+<span class="hljs-number">10</span>
+</code></pre><p>To &#39;query&#39; the math expression you can evaluate them using the <code>?</code> command and giving the math operation as argument. And getting the result in hexa, decimal, octal and binary.</p>
+<pre><code><span class="hljs-blockquote">&gt; ? 0x100+200</span>
+0x1C8 ; 456d ; 710o ; 1100 1000  
+</code></pre><p>In visual mode just press <code>u</code> or <code>U</code> to undo or redo inside the seek history.</p>
+<h2 id="3-2-block-size">3.2 Block size</h2>
+<p>The block size is the default view size for radare. All commands will work with this constraint, but you can always temporally change the block size just giving a numeric argument to the print commands for example (px 20)</p>
+<pre><code>[<span class="hljs-number">0</span>xB7F9D810]&gt; b?
+Usage: b[f] [arg]
+b         display current <span class="hljs-keyword">block</span> size
+b+<span class="hljs-number">3</span>       increase blocksize <span class="hljs-keyword">by</span> <span class="hljs-number">3</span>
+b-<span class="hljs-number">16</span>      decrement blocksize <span class="hljs-keyword">by</span> <span class="hljs-number">3</span>
+b <span class="hljs-number">33</span>      <span class="hljs-keyword">set</span> <span class="hljs-keyword">block</span> size <span class="hljs-keyword">to</span> <span class="hljs-number">33</span>
+b eip+<span class="hljs-number">4</span>   numeric argument can be an expression
+bf foo    <span class="hljs-keyword">set</span> <span class="hljs-keyword">block</span> size <span class="hljs-keyword">to</span> flag size
+bm <span class="hljs-number">1</span>M     <span class="hljs-keyword">set</span> max <span class="hljs-keyword">block</span> size
+</code></pre><p>The <code>b</code> command is used to change the block size:</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; b <span class="hljs-number">0x100</span>   ; block size = <span class="hljs-number">0x100</span>
+[<span class="hljs-number">0x00000000</span>]&gt; b +<span class="hljs-number">16</span>     ;  <span class="hljs-keyword">...</span> = <span class="hljs-number">0x110</span>
+[<span class="hljs-number">0x00000000</span>]&gt; b -<span class="hljs-number">32</span>     ;  <span class="hljs-keyword">...</span> = <span class="hljs-number">0xf0</span>
+</code></pre><p>The <code>bf</code> command is used to change the block size to the one specified by a flag. For example in symbols, the block size of the flag represents the size of the function.</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; bf sym.main    ; block size = sizeof(sym.main)
+[<span class="hljs-number">0x00000000</span>]&gt; pd @ sym.main  ; disassemble sym.main
+<span class="hljs-keyword">...</span>
+</code></pre><p>You can perform these two operations in a single one (pdf):</p>
+<pre><code> <span class="hljs-attr_selector">[0x00000000]</span>&gt; <span class="hljs-tag">pdf</span> <span class="hljs-at_rule">@ sym.main</span>
+</code></pre><h2 id="3-3-sections">3.3 Sections</h2>
+<p>It is usually on firmware images, bootloaders and binary files to find sections that are loaded in memory at different addresses than the one in the disk.</p>
+<p>To solve this issue, radare implements <code>S</code>.</p>
+<p>Here&#39;s the help message:</p>
+<pre><code>[<span class="hljs-number">0xB7EE8810</span>]&gt; S?
+Usage: S[?-.*=adlr] [...]
+S               ; <span class="hljs-type">list</span> sections
+S.              ; show current section <span class="hljs-property">name</span>
+S?              ; show this help message
+S*              ; <span class="hljs-type">list</span> sections (<span class="hljs-keyword">in</span> radare commands)
+S=              ; <span class="hljs-type">list</span> sections (<span class="hljs-keyword">in</span> nice ascii-art bars)
+Sa[-] [arch] [bits] [[off]] ; Specify arch <span class="hljs-keyword">and</span> bits <span class="hljs-keyword">for</span> <span class="hljs-keyword">given</span> section
+Sd [<span class="hljs-type">file</span>]       ; dump current section <span class="hljs-keyword">to</span> a <span class="hljs-type">file</span> (see dmd)
+Sl [<span class="hljs-type">file</span>]       ; load <span class="hljs-property">contents</span> <span class="hljs-keyword">of</span> <span class="hljs-type">file</span> <span class="hljs-keyword">into</span> current section (see dml)
+Sr [<span class="hljs-property">name</span>]       ; rename section <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> current seek
+S [off] [vaddr] [sz] [vsz] [<span class="hljs-property">name</span>] [rwx] ; add new section
+S-[<span class="hljs-property">id</span>|<span class="hljs-number">0</span>xoff|*]  ; remove this section definition
+</code></pre><p>We can specify a section in a single line in this way:</p>
+<pre><code><span class="hljs-tag">S</span> <span class="hljs-attr_selector">[off]</span> <span class="hljs-attr_selector">[vaddr]</span> <span class="hljs-attr_selector">[sz]</span> <span class="hljs-attr_selector">[vsz]</span> <span class="hljs-attr_selector">[name]</span> <span class="hljs-attr_selector">[rwx]</span> ; <span class="hljs-tag">add</span> <span class="hljs-tag">new</span> <span class="hljs-tag">section</span>
+</code></pre><p>For example:</p>
+<pre><code><span class="hljs-attr_selector">[0x00404888]</span>&gt; <span class="hljs-tag">S</span> 0<span class="hljs-tag">x00000100</span> 0<span class="hljs-tag">x00400000</span> 0<span class="hljs-tag">x0001ae08</span> 0001<span class="hljs-tag">ae08</span> <span class="hljs-tag">test</span> <span class="hljs-tag">rwx</span>
+</code></pre><p>Displaying the sections information:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; S ; list sections
+
+[<span class="hljs-number">00</span>] . <span class="hljs-number">0x00000238</span> r-- va=<span class="hljs-number">0x00400238</span> sz=<span class="hljs-number">0x0000001c</span> vsz=0000001c .interp
+[<span class="hljs-number">01</span>] . <span class="hljs-number">0x00000254</span> r-- va=<span class="hljs-number">0x00400254</span> sz=<span class="hljs-number">0x00000020</span> vsz=<span class="hljs-number">00000020</span> .note.ABI_tag
+[<span class="hljs-number">02</span>] . <span class="hljs-number">0x00000274</span> r-- va=<span class="hljs-number">0x00400274</span> sz=<span class="hljs-number">0x00000024</span> vsz=<span class="hljs-number">00000024</span> .note.gnu.build_id
+[<span class="hljs-number">03</span>] . <span class="hljs-number">0x00000298</span> r-- va=<span class="hljs-number">0x00400298</span> sz=<span class="hljs-number">0x00000068</span> vsz=<span class="hljs-number">00000068</span> .gnu.hash
+[<span class="hljs-number">04</span>] . <span class="hljs-number">0x00000300</span> r-- va=<span class="hljs-number">0x00400300</span> sz=<span class="hljs-number">0x00000c18</span> vsz=00000c18 .dynsym
+
+
+[<span class="hljs-number">0xB7EEA810</span>]&gt; S= ; list sections (<span class="hljs-keyword">in</span> nice ascii-art bars)
+
+<span class="hljs-keyword">...</span>
+<span class="hljs-number">25</span>  <span class="hljs-number">0x0001a600</span> |-----------------------------<span class="hljs-comment">#| 0x0001a608 --- .gnu_debuglink</span>
+<span class="hljs-number">26</span>  <span class="hljs-number">0x0001a608</span> |-----------------------------<span class="hljs-comment">#| 0x0001a706 --- .shstrtab</span>
+<span class="hljs-number">27</span>* <span class="hljs-number">0x00000000</span> |<span class="hljs-comment">##############################| 0x0001ae08 rwx ehdr</span>
+=&gt;  <span class="hljs-number">0x00004888</span> |-----^------------------------| <span class="hljs-number">0x00004988</span>
+</code></pre><p>The first three lines are sections and the last one <code>=&gt;</code> is the current seek representation based on the proportions over them.</p>
+<p>To remove a section definition just prefix the name of the section with <code>-</code>:</p>
+<pre><code><span class="hljs-attr_selector">[0xB7EE8810]</span>&gt; <span class="hljs-tag">S</span> <span class="hljs-tag">-</span><span class="hljs-class">.dynsym</span>
+</code></pre><h2 id="3-4-mapping-files">3.4 Mapping files</h2>
+<p>Radare IO allows to virtually map contents of files in the same IO space at random offsets. This is useful to open multiple files in a single view or just to &#39;emulate&#39; an static environment like if it was in the debugger with the program and all its libraries mapped there.</p>
+<p>Using the <code>S</code>ections command you&#39;ll be able to define different base address for each library loaded at different offsets.</p>
+<p>Mapping files is done with the <code>o</code> (open) command. Let&#39;s read the help:</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; o?
+Usage: o[com- ] [<span class="hljs-type">file</span>] ([<span class="hljs-command">offset</span>])
+o                  <span class="hljs-type">list</span> opened files
+oc [<span class="hljs-type">file</span>]          open core <span class="hljs-type">file</span>, like relaunching r2
+oo                 reopen current <span class="hljs-type">file</span> (kill+fork <span class="hljs-keyword">in</span> debugger)
+oo+                reopen current <span class="hljs-type">file</span> <span class="hljs-keyword">in</span> <span class="hljs-command">read</span>-<span class="hljs-command">write</span>
+o <span class="hljs-number">4</span>                priorize io <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> fd <span class="hljs-number">4</span> (bring <span class="hljs-keyword">to</span> <span class="hljs-keyword">front</span>)
+o-<span class="hljs-number">1</span>                close <span class="hljs-type">file</span> index <span class="hljs-number">1</span>
+o /bin/ls          open /bin/ls <span class="hljs-type">file</span> <span class="hljs-keyword">in</span> <span class="hljs-command">read</span>-only
+o+/bin/ls          open /bin/ls <span class="hljs-type">file</span> <span class="hljs-keyword">in</span> <span class="hljs-command">read</span>-<span class="hljs-command">write</span> mode
+o /bin/ls <span class="hljs-number">0x4000</span>   map <span class="hljs-type">file</span> <span class="hljs-keyword">at</span> <span class="hljs-number">0x4000</span>
+<span class="hljs-function_start"><span class="hljs-keyword">on</span></span> /bin/ls <span class="hljs-number">0x4000</span>  map raw <span class="hljs-type">file</span> <span class="hljs-keyword">at</span> <span class="hljs-number">0x4000</span> (no r_bin involved)
+om[?]              create, <span class="hljs-type">list</span>, remove IO maps
+</code></pre><p>Let&#39;s prepare a simple layout:</p>
+<pre><code>$ rabin2 -l /bin/ls
+    [Linked libraries]
+    libselinux<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+    librt<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+    libacl<span class="hljs-preprocessor">.so</span><span class="hljs-number">.1</span>
+    libc<span class="hljs-preprocessor">.so</span><span class="hljs-number">.6</span>
+
+    <span class="hljs-number">4</span> libraries
+</code></pre><p>Map a file:</p>
+<pre><code>[0x00001190]&gt; o /bin/zsh 0x499999
+</code></pre><p>Listing mapped files:</p>
+<pre><code>[0x00000000]&gt; o
+-<span class="ruby"> <span class="hljs-number">6</span> /bin/ls @ <span class="hljs-number">0x0</span> ; r
+</span>-<span class="ruby"> <span class="hljs-number">10</span> /lib/ld-linux.so.<span class="hljs-number">2</span> @ <span class="hljs-number">0x100000000</span> ; r
+</span>-<span class="ruby"> <span class="hljs-number">14</span> /bin/zsh @ <span class="hljs-number">0x499999</span> ; r</span>
+</code></pre><p>Print some hexadecimal from /bin/zsh</p>
+<pre><code><span class="hljs-attr_selector">[0x00000000]</span>&gt; <span class="hljs-tag">px</span> <span class="hljs-at_rule">@ <span class="hljs-number">0</span>x499999</span>
+</code></pre><p>To unmap these files just use the <code>o-</code> command giving the file descriptor as argument:</p>
+<pre><code><span class="hljs-attr_selector">[0x00000000]</span>&gt; <span class="hljs-tag">o-14</span>
+</code></pre><h2 id="3-5-print-modes">3.5 Print modes</h2>
+<p>One of the efforts in radare is the way to show the information to the user. This is interpreting the bytes and giving an almost readable output format.</p>
+<p>The bytes can be represented as integers, shorts, longs, floats, timestamps, hexpair strings, or things more complex like C structures, disassembly, decompilations, external processors, ..</p>
+<p>This is a list of the available print modes listable with <code>p?</code>:</p>
+<pre><code>[0x08049AD0]&gt; p?
+Usage: p[=68abcdDfiImrstuxz] [arg|len]
+p=[bep?] [blks]  show entropy/printable chars/chars bars
+p2 [len]         8x8 2bpp-tiles
+p6[de] [len]     base64 decode/encode
+p8 [len]         8bit hexpair list of bytes
+pa[ed] [hex asm] assemble (pa) or disasm (pad) or esil (pae) from hexpairs
+p[bB] [len]      bitstream of N bytes
+pc[p] [len]      output C (or python) format
+p[<span class="hljs-link_label">dD</span>][<span class="hljs-link_reference">lf</span>] [l]    disassemble N opcodes/bytes (see pd?)
+pf[?|.nam] [fmt] print formatted data (pf.name, pf.name $<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">expr</span>&gt;</span></span>) 
+p[<span class="hljs-link_label">iI</span>][<span class="hljs-link_reference">df</span>] [len]  print N instructions/bytes (f=func) (see pi? and pdi)
+pm [magic]       print libmagic data (pm? for more information)
+pr [len]         print N raw bytes
+p[kK] [len]      print key in randomart (K is for mosaic)
+ps[pwz] [len]    print pascal/wide/zero-terminated strings
+pt[dn?] [len]    print different timestamps
+pu[w] [len]      print N url encoded bytes (w=wide)
+pv[jh] [mode]      bar|json|histogram blocks (mode: e?search.in)
+p[<span class="hljs-link_label">xX</span>][<span class="hljs-link_reference">owq</span>] [len] hexdump of N bytes (o=octal, w=32bit, q=64bit)
+pz [len]         print zoom view (see pz? for help)
+pwd              display current working directory
+</code></pre><h3 id="3-5-1-hexadecimal">3.5.1 Hexadecimal</h3>
+<p>User-friendly way:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; px
+- offset -   <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  A B  C D  E F  <span class="hljs-number">0123456789</span>ABCDEF
+<span class="hljs-number">0x00404888</span>  <span class="hljs-number">31</span>ed <span class="hljs-number">4989</span> d15e <span class="hljs-number">4889</span> e248 <span class="hljs-number">83e4</span> f050 <span class="hljs-number">5449</span>  <span class="hljs-number">1.</span>I..^H.<span class="hljs-preprocessor">.H</span>..<span class="hljs-preprocessor">.PTI</span>
+<span class="hljs-number">0x00404898</span>  c7c0 <span class="hljs-number">4024</span> <span class="hljs-number">4100</span> <span class="hljs-number">48</span>c7 c1b0 <span class="hljs-number">2341</span> <span class="hljs-number">0048</span> c7c7  ..@$A<span class="hljs-preprocessor">.H</span>...<span class="hljs-preprocessor">#A.H..</span>
+<span class="hljs-number">0x004048a8</span>  d028 <span class="hljs-number">4000</span> e83f dcff fff4 <span class="hljs-number">6690</span> <span class="hljs-number">662</span>e <span class="hljs-number">0</span>f1f  .(@..?...<span class="hljs-preprocessor">.f</span><span class="hljs-preprocessor">.f</span>...
+</code></pre><h4 id="show-hexadecimal-words-dump-32bit-">Show hexadecimal words dump (32bit)</h4>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; pxw
+<span class="hljs-number">0x00404888</span>  <span class="hljs-number">0x8949ed31</span> <span class="hljs-number">0x89485ed1</span> <span class="hljs-number">0xe48348e2</span> <span class="hljs-number">0x495450f0</span>  <span class="hljs-number">1.</span>I..^H.<span class="hljs-preprocessor">.H</span>..<span class="hljs-preprocessor">.PTI</span>
+<span class="hljs-number">0x00404898</span>  <span class="hljs-number">0x2440c0c7</span> <span class="hljs-number">0xc7480041</span> <span class="hljs-number">0x4123b0c1</span> <span class="hljs-number">0xc7c74800</span>  ..@$A<span class="hljs-preprocessor">.H</span>...<span class="hljs-preprocessor">#A.H..</span>
+<span class="hljs-number">0x004048a8</span>  <span class="hljs-number">0x004028d0</span> <span class="hljs-number">0xffdc3fe8</span> <span class="hljs-number">0x9066f4ff</span> <span class="hljs-number">0x1f0f2e66</span>  .(@..?...<span class="hljs-preprocessor">.f</span><span class="hljs-preprocessor">.f</span>...
+
+[<span class="hljs-number">0x00404888</span>]&gt; e cfg<span class="hljs-preprocessor">.bigendian</span> 
+false
+
+[<span class="hljs-number">0x00404888</span>]&gt; e cfg<span class="hljs-preprocessor">.bigendian</span> = true
+
+[<span class="hljs-number">0x00404888</span>]&gt; pxw
+<span class="hljs-number">0x00404888</span>  <span class="hljs-number">0x31ed4989</span> <span class="hljs-number">0xd15e4889</span> <span class="hljs-number">0xe24883e4</span> <span class="hljs-number">0xf0505449</span>  <span class="hljs-number">1.</span>I..^H.<span class="hljs-preprocessor">.H</span>..<span class="hljs-preprocessor">.PTI</span>
+<span class="hljs-number">0x00404898</span>  <span class="hljs-number">0xc7c04024</span> <span class="hljs-number">0x410048c7</span> <span class="hljs-number">0xc1b02341</span> <span class="hljs-number">0x0048c7c7</span>  ..@$A<span class="hljs-preprocessor">.H</span>...<span class="hljs-preprocessor">#A.H..</span>
+<span class="hljs-number">0x004048a8</span>  <span class="hljs-number">0xd0284000</span> <span class="hljs-number">0xe83fdcff</span> <span class="hljs-number">0xfff46690</span> <span class="hljs-number">0x662e0f1f</span>  .(@..?...<span class="hljs-preprocessor">.f</span><span class="hljs-preprocessor">.f</span>...
+</code></pre><h4 id="8bit-hexpair-list-of-bytes">8bit hexpair list of bytes</h4>
+<pre><code><span class="hljs-attr_selector">[0x00404888]</span>&gt; <span class="hljs-tag">p8</span> 16
+31<span class="hljs-tag">ed4989d15e4889e24883e4f0505449</span>
+</code></pre><h4 id="show-hexadecimal-quad-words-dump-64bit-">Show hexadecimal quad-words dump (64bit)</h4>
+<pre><code>[<span class="hljs-number">0x08049A80</span>]&gt; pxq
+<span class="hljs-number">0x00001390</span>  <span class="hljs-number">0x65625f6b63617473</span>  <span class="hljs-number">0x646e6962006e6967</span>   stack_begin.bind
+<span class="hljs-number">0x000013a0</span>  <span class="hljs-number">0x616d6f6474786574</span>  <span class="hljs-number">0x7469727766006e69</span>   textdomain.fwrit
+<span class="hljs-number">0x000013b0</span>  <span class="hljs-number">0x6b636f6c6e755f65</span>  <span class="hljs-number">0x6d63727473006465</span>   e_unlocked.strcm
+<span class="hljs-keyword">...</span>
+</code></pre><h3 id="3-5-2-date-formats">3.5.2 Date formats</h3>
+<p>The current supported timestamp print modes are:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; pt?
+|Usage: pt[dn?]
+| pt      <span class="hljs-keyword">print</span> unix <span class="hljs-keyword">time</span> (<span class="hljs-number">32</span> bit cfg.big_endian)
+| ptd     <span class="hljs-keyword">print</span> dos <span class="hljs-keyword">time</span> (<span class="hljs-number">32</span> bit cfg.big_endian)
+| ptn     <span class="hljs-keyword">print</span> ntfs <span class="hljs-keyword">time</span> (<span class="hljs-number">64</span> bit !cfg.big_endian)
+| pt?     show help message
+</code></pre><p>For example, you can &#39;view&#39; the current buffer as timestamps in ntfs time:</p>
+<pre><code>[<span class="hljs-number">0</span>x08048000]&gt; <span class="hljs-built_in">eval</span> cfg.bigendian = <span class="hljs-literal">false</span>
+[<span class="hljs-number">0</span>x08048000]&gt; pt <span class="hljs-number">4</span>
+<span class="hljs-number">29</span>:<span class="hljs-number">04</span>:<span class="hljs-number">32948</span> <span class="hljs-number">23</span>:<span class="hljs-number">12</span>:<span class="hljs-number">36</span> +<span class="hljs-number">0000</span>
+[<span class="hljs-number">0</span>x08048000]&gt; <span class="hljs-built_in">eval</span> cfg.bigendian = <span class="hljs-literal">true</span>
+[<span class="hljs-number">0</span>x08048000]&gt; pt <span class="hljs-number">4</span>
+<span class="hljs-number">20</span>:<span class="hljs-number">05</span>:<span class="hljs-number">13001</span> <span class="hljs-number">09</span>:<span class="hljs-number">29</span>:<span class="hljs-number">21</span> +<span class="hljs-number">0000</span>
+</code></pre><p>As you can see, the endianness affects to the print formats. Once printing these filetimes you can grep the results by the year for example:</p>
+<pre><code>[<span class="hljs-number">0</span>x08048000]&gt; pt <span class="hljs-string">| grep 1974 | wc -l</span>
+<span class="hljs-number">15</span>
+[<span class="hljs-number">0</span>x08048000]&gt; pt <span class="hljs-string">| grep 2022</span>
+<span class="hljs-number">27</span>:<span class="hljs-number">04</span>:<span class="hljs-number">2022</span> <span class="hljs-number">16</span>:<span class="hljs-number">15</span>:<span class="hljs-number">43</span> +<span class="hljs-number">0000</span>
+</code></pre><p>The date format printed can be configured with the <code>cfg.datefmt</code> variable following the strftime(3) format.</p>
+<p>Extracted from the strftime(3) manpage:</p>
+<pre><code>%a  The abbreviated <span class="hljs-property">name</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> week according <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> current locale.
+%A  The full <span class="hljs-property">name</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> week according <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> current locale.
+%b  The abbreviated <span class="hljs-property">month</span> <span class="hljs-property">name</span> according <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> current locale.
+%B  The full <span class="hljs-property">month</span> <span class="hljs-property">name</span> according <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> current locale.
+%c  The preferred <span class="hljs-type">date</span> <span class="hljs-keyword">and</span> <span class="hljs-property">time</span> representation <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> current locale.
+%C  The century <span class="hljs-type">number</span> (<span class="hljs-property">year</span>/<span class="hljs-number">100</span>) <span class="hljs-keyword">as</span> a <span class="hljs-number">2</span>-digit <span class="hljs-type">integer</span>. (SU)
+%d  The <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-property">month</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">01</span> <span class="hljs-keyword">to</span> <span class="hljs-number">31</span>).
+%D  Equivalent <span class="hljs-keyword">to</span> %m/%d/%y.  (Yecch—<span class="hljs-keyword">for</span> Americans only.  Americans should note <span class="hljs-keyword">that</span> <span class="hljs-keyword">in</span> other countries %d/%m/%y <span class="hljs-keyword">is</span> rather common. This means <span class="hljs-keyword">that</span> <span class="hljs-keyword">in</span> international context this format <span class="hljs-keyword">is</span> ambiguous <span class="hljs-keyword">and</span> should <span class="hljs-keyword">not</span> be used.) (SU)
+%e  Like %d, <span class="hljs-keyword">the</span> <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-property">month</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span>, <span class="hljs-keyword">but</span> a leading zero <span class="hljs-keyword">is</span> replaced <span class="hljs-keyword">by</span> a <span class="hljs-constant">space</span>. (SU)
+%E  Modifier: use alternative format, see <span class="hljs-keyword">below</span>. (SU)
+%F  Equivalent <span class="hljs-keyword">to</span> %Y-%m-%d (<span class="hljs-keyword">the</span> ISO <span class="hljs-number">8601</span> <span class="hljs-type">date</span> format). (C99)
+%G  The ISO <span class="hljs-number">8601</span> week-based <span class="hljs-property">year</span> (see NOTES) <span class="hljs-keyword">with</span> century <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span>.  The <span class="hljs-number">4</span>-digit <span class="hljs-property">year</span> corresponding <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> ISO week <span class="hljs-type">number</span> (see %V).  This has <span class="hljs-keyword">the</span> same format <span class="hljs-keyword">and</span> value <span class="hljs-keyword">as</span> %Y, except <span class="hljs-keyword">that</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">the</span> ISO week <span class="hljs-type">number</span> belongs <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> previous <span class="hljs-keyword">or</span> next <span class="hljs-property">year</span>, <span class="hljs-keyword">that</span> <span class="hljs-property">year</span> <span class="hljs-keyword">is</span> used instead. (TZ)
+%g  Like %G, <span class="hljs-keyword">but</span> <span class="hljs-keyword">without</span> century, <span class="hljs-keyword">that</span> <span class="hljs-keyword">is</span>, <span class="hljs-keyword">with</span> a <span class="hljs-number">2</span>-digit <span class="hljs-property">year</span> (<span class="hljs-number">00</span>-<span class="hljs-number">99</span>). (TZ)
+%h  Equivalent <span class="hljs-keyword">to</span> %b.  (SU)
+%H  The hour <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> using a <span class="hljs-number">24</span>-hour clock (range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">23</span>).
+%I  The hour <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> using a <span class="hljs-number">12</span>-hour clock (range <span class="hljs-number">01</span> <span class="hljs-keyword">to</span> <span class="hljs-number">12</span>).
+%j  The <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">001</span> <span class="hljs-keyword">to</span> <span class="hljs-number">366</span>).
+%k  The hour (<span class="hljs-number">24</span>-hour clock) <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">23</span>); single digits are preceded <span class="hljs-keyword">by</span> a blank.  (See also %H.)  (TZ)
+%l  The hour (<span class="hljs-number">12</span>-hour clock) <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">1</span> <span class="hljs-keyword">to</span> <span class="hljs-number">12</span>); single digits are preceded <span class="hljs-keyword">by</span> a blank.  (See also %I.)  (TZ)
+%m  The <span class="hljs-property">month</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">01</span> <span class="hljs-keyword">to</span> <span class="hljs-number">12</span>).
+%M  The minute <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">59</span>).
+%n  A newline <span class="hljs-property">character</span>. (SU)
+%O  Modifier: use alternative format, see <span class="hljs-keyword">below</span>. (SU)
+%p  Either <span class="hljs-string">"AM"</span> <span class="hljs-keyword">or</span> <span class="hljs-string">"PM"</span> according <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">given</span> <span class="hljs-property">time</span> value, <span class="hljs-keyword">or</span> <span class="hljs-keyword">the</span> corresponding strings <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> current locale.  Noon <span class="hljs-keyword">is</span> treated <span class="hljs-keyword">as</span> <span class="hljs-string">"PM"</span> <span class="hljs-keyword">and</span> midnight <span class="hljs-keyword">as</span> <span class="hljs-string">"AM"</span>.
+%P  Like %p <span class="hljs-keyword">but</span> <span class="hljs-keyword">in</span> lowercase: <span class="hljs-string">"am"</span> <span class="hljs-keyword">or</span> <span class="hljs-string">"pm"</span> <span class="hljs-keyword">or</span> a corresponding <span class="hljs-type">string</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> current locale. (GNU)
+%r  The <span class="hljs-property">time</span> <span class="hljs-keyword">in</span> a.m. <span class="hljs-keyword">or</span> p.m. notation.  In <span class="hljs-keyword">the</span> POSIX locale this <span class="hljs-keyword">is</span> equivalent <span class="hljs-keyword">to</span> %I:%M:%S %p.  (SU)
+%R  The <span class="hljs-property">time</span> <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>-hour notation (%H:%M).  (SU) For a <span class="hljs-property">version</span> including <span class="hljs-keyword">the</span> seconds, see %T <span class="hljs-keyword">below</span>.
+%s  The <span class="hljs-type">number</span> <span class="hljs-keyword">of</span> seconds <span class="hljs-keyword">since</span> <span class="hljs-keyword">the</span> Epoch, <span class="hljs-number">1970</span>-<span class="hljs-number">01</span>-<span class="hljs-number">01</span> <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>  +<span class="hljs-number">0000</span> (UTC). (TZ)
+%S  The <span class="hljs-keyword">second</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> (range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">60</span>).  (The range <span class="hljs-keyword">is</span> up <span class="hljs-keyword">to</span> <span class="hljs-number">60</span> <span class="hljs-keyword">to</span> allow <span class="hljs-keyword">for</span> occasional leap seconds.)
+%t  A <span class="hljs-constant">tab</span> <span class="hljs-property">character</span>. (SU)
+%T  The <span class="hljs-property">time</span> <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>-hour notation (%H:%M:%S).  (SU)
+%u  The <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> week <span class="hljs-keyword">as</span> a decimal, range <span class="hljs-number">1</span> <span class="hljs-keyword">to</span> <span class="hljs-number">7</span>, Monday being <span class="hljs-number">1.</span>  See also %w.  (SU)
+%U  The week <span class="hljs-type">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> current <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span>, range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">53</span>, starting <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> Sunday <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> week <span class="hljs-number">01.</span>  See also %V <span class="hljs-keyword">and</span> %W.
+%V  The ISO <span class="hljs-number">8601</span> week <span class="hljs-type">number</span> (see NOTES) <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> current <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span>, range <span class="hljs-number">01</span> <span class="hljs-keyword">to</span> <span class="hljs-number">53</span>, <span class="hljs-keyword">where</span> week <span class="hljs-number">1</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> week <span class="hljs-keyword">that</span> has <span class="hljs-keyword">at</span> least <span class="hljs-number">4</span> days <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> new <span class="hljs-property">year</span>.  See also %U <span class="hljs-keyword">and</span> %W.(U)
+%w  The <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> week <span class="hljs-keyword">as</span> a decimal, range <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">6</span>, Sunday being <span class="hljs-number">0.</span>  See also %u.
+%W  The week <span class="hljs-type">number</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> current <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span>, range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">53</span>, starting <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> Monday <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> <span class="hljs-property">day</span> <span class="hljs-keyword">of</span> week <span class="hljs-number">01.</span>
+%x  The preferred <span class="hljs-type">date</span> representation <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> current locale <span class="hljs-keyword">without</span> <span class="hljs-keyword">the</span> <span class="hljs-property">time</span>.
+%X  The preferred <span class="hljs-property">time</span> representation <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> current locale <span class="hljs-keyword">without</span> <span class="hljs-keyword">the</span> <span class="hljs-type">date</span>.
+%y  The <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> <span class="hljs-keyword">without</span> a century (range <span class="hljs-number">00</span> <span class="hljs-keyword">to</span> <span class="hljs-number">99</span>).
+%Y  The <span class="hljs-property">year</span> <span class="hljs-keyword">as</span> a decimal <span class="hljs-type">number</span> including <span class="hljs-keyword">the</span> century.
+%z  The +hhmm <span class="hljs-keyword">or</span> -hhmm numeric timezone (<span class="hljs-keyword">that</span> <span class="hljs-keyword">is</span>, <span class="hljs-keyword">the</span> hour <span class="hljs-keyword">and</span> minute <span class="hljs-command">offset</span> <span class="hljs-keyword">from</span> UTC). (SU)
+%Z  The timezone <span class="hljs-property">name</span> <span class="hljs-keyword">or</span> abbreviation.
+%+  The <span class="hljs-type">date</span> <span class="hljs-keyword">and</span> <span class="hljs-property">time</span> <span class="hljs-keyword">in</span> <span class="hljs-type">date</span>(<span class="hljs-number">1</span>) format. (TZ) (Not supported <span class="hljs-keyword">in</span> glibc2.)
+%%  A literal '%' <span class="hljs-property">character</span>.
+</code></pre><h3 id="3-5-3-basic-types">3.5.3 Basic types</h3>
+<p>All basic types are mapped as print modes. If you are interested in a more complex structure or just type : <code>pf?</code></p>
+<p>Here&#39;s the list of the print (pf?) modes for basic types:</p>
+<pre><code>Usage: pf[.key[.field[=<span class="hljs-built_in">value</span>]]|[ val]]|[times][<span class="hljs-built_in">format</span>] [arg0 arg1 ...]
+Examples:
+  pf <span class="hljs-number">10</span>xiz pointer <span class="hljs-built_in">length</span> <span class="hljs-keyword">string</span>
+  pf {array_size}b @ array_base
+  pf.             <span class="hljs-comment"># list all formats</span>
+  pf.obj xxdz prev next size name
+  pf.obj          <span class="hljs-comment"># run stored format</span>
+  pf.obj.name     <span class="hljs-comment"># show string inside object</span>
+  pf.obj.size=<span class="hljs-number">33</span>  <span class="hljs-comment"># set new size</span>
+ Format <span class="hljs-keyword">chars</span>:
+  e - temporally swap endian
+  f - float <span class="hljs-built_in">value</span> (<span class="hljs-number">4</span> <span class="hljs-keyword">bytes</span>)
+  c - <span class="hljs-keyword">char</span> (signed <span class="hljs-keyword">byte</span>)
+  b - <span class="hljs-keyword">byte</span> (unsigned)
+  B - show <span class="hljs-number">10</span> <span class="hljs-keyword">first</span> <span class="hljs-keyword">bytes</span> <span class="hljs-operator">of</span> buffer
+  i - %i <span class="hljs-keyword">integer</span> <span class="hljs-built_in">value</span> (<span class="hljs-number">4</span> <span class="hljs-keyword">bytes</span>)
+  w - <span class="hljs-built_in">word</span> (<span class="hljs-number">2</span> <span class="hljs-keyword">bytes</span> unsigned <span class="hljs-keyword">short</span> <span class="hljs-operator">in</span> hex)
+  q - quadword (<span class="hljs-number">8</span> <span class="hljs-keyword">bytes</span>)
+  p - pointer reference (<span class="hljs-number">2</span>, <span class="hljs-number">4</span> <span class="hljs-operator">or</span> <span class="hljs-number">8</span> <span class="hljs-keyword">bytes</span>)
+  d - <span class="hljs-number">0</span>x%<span class="hljs-number">08</span>x hexadecimal <span class="hljs-built_in">value</span> (<span class="hljs-number">4</span> <span class="hljs-keyword">bytes</span>)
+  D - disassemble <span class="hljs-constant">one</span> opcode
+  x - <span class="hljs-number">0</span>x%<span class="hljs-number">08</span>x hexadecimal <span class="hljs-built_in">value</span> <span class="hljs-operator">and</span> flag (fd @ addr)
+  z - \<span class="hljs-number">0</span> terminated <span class="hljs-keyword">string</span>
+  Z - \<span class="hljs-number">0</span> terminated wide <span class="hljs-keyword">string</span>
+  s - <span class="hljs-number">32</span>bit pointer <span class="hljs-built_in">to</span> <span class="hljs-keyword">string</span> (<span class="hljs-number">4</span> <span class="hljs-keyword">bytes</span>)
+  S - <span class="hljs-number">64</span>bit pointer <span class="hljs-built_in">to</span> <span class="hljs-keyword">string</span> (<span class="hljs-number">8</span> <span class="hljs-keyword">bytes</span>)
+  * - next <span class="hljs-keyword">char</span> is pointer (honors asm.bits)
+  + - toggle show flags <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> <span class="hljs-built_in">offset</span>
+  : - skip <span class="hljs-number">4</span> <span class="hljs-keyword">bytes</span>
+  . - skip <span class="hljs-number">1</span> <span class="hljs-keyword">byte</span>
+</code></pre><p>Let&#39;s see some examples:</p>
+<pre><code>[0x4A13B8C0]&gt; pf i
+<span class="hljs-constant">0x00404888</span> = 837634441
+
+[0x4A13B8C0]&gt; pf
+<span class="hljs-constant">0x00404888</span> = 837634432.000000
+</code></pre><h3 id="3-5-4-source-asm-c-">3.5.4 Source (asm, C)</h3>
+<p>Valid print code formats are: JSON, C, Python, Cstring (pcj, pc, pcp, pcs) 
+    pc     C
+    pcs    string
+    pcj    json
+    pcJ    javascript
+    pcp    python
+    pcw    words (4 byte)
+    pcd    dwords (8 byte)</p>
+<pre><code><span class="hljs-special">[</span>0xB7F8E810<span class="hljs-special">]</span>&gt; pc 32
+<span class="hljs-special">#</span>define _BUFFER_SIZE 32
+unsigned char buffer<span class="hljs-special">[</span>_BUFFER_SIZE<span class="hljs-special">]</span> = <span class="hljs-special">{</span>
+0x89, 0xe0, 0xe8, 0x49, 0x02, 0x00, 0x00, 0x89, 0xc7, 0xe8, 0xe2, 0xff, 0xff, 0xff, 0x81, 0xc3, 0xd6, 0xa7, 0x01, 0x00, 0x8b, 0x83, 0x00, 0xff, 0xff, 0xff, 0x5a, 0x8d, 0x24, 0x84, 0x29, 0xc2 <span class="hljs-special">}</span>;
+
+
+<span class="hljs-special">[</span>0x7fcd6a891630<span class="hljs-special">]</span>&gt; pcs
+"<span class="hljs-command">\x</span>48<span class="hljs-command">\x</span>89<span class="hljs-command">\xe</span>7<span class="hljs-command">\xe</span>8<span class="hljs-command">\x</span>68<span class="hljs-command">\x</span>39<span class="hljs-command">\x</span>00<span class="hljs-command">\x</span>00<span class="hljs-command">\x</span>49<span class="hljs-command">\x</span>89<span class="hljs-command">\xc</span>4<span class="hljs-command">\x</span>8b<span class="hljs-command">\x</span>05<span class="hljs-command">\xef</span><span class="hljs-command">\x</span>16<span class="hljs-command">\x</span>22<span class="hljs-command">\x</span>00<span class="hljs-command">\x</span>5a<span class="hljs-command">\x</span>48<span class="hljs-command">\x</span>8d<span class="hljs-command">\x</span>24<span class="hljs-command">\xc</span>4<span class="hljs-command">\x</span>29<span class="hljs-command">\xc</span>2<span class="hljs-command">\x</span>52<span class="hljs-command">\x</span>48<span class="hljs-command">\x</span>89<span class="hljs-command">\xd</span>6<span class="hljs-command">\x</span>49<span class="hljs-command">\x</span>89<span class="hljs-command">\xe</span>5<span class="hljs-command">\x</span>48<span class="hljs-command">\x</span>83<span class="hljs-command">\xe</span>4<span class="hljs-command">\xf</span>0<span class="hljs-command">\x</span>48<span class="hljs-command">\x</span>8b<span class="hljs-command">\x</span>3d<span class="hljs-command">\x</span>06<span class="hljs-command">\x</span>1a
+</code></pre><h3 id="3-5-5-strings">3.5.5 Strings</h3>
+<p>Strings are probably one of the most important entrypoints while starting to reverse engineer a program because they are usually referencing information about the functions actions ( asserts, debug or info messages, ...).</p>
+<p>So it is important for radare to be able to print strings in multiple ways:</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; ps?
+|Usage: ps[zpw] [N]
+| ps  = <span class="hljs-built_in">print</span> <span class="hljs-built_in">string</span>
+| psb = <span class="hljs-built_in">print</span> strings <span class="hljs-keyword">in</span> current block
+| psx = show <span class="hljs-built_in">string</span> with scaped chars
+| psz = <span class="hljs-built_in">print</span> zero terminated <span class="hljs-built_in">string</span>
+| psp = <span class="hljs-built_in">print</span> pascal <span class="hljs-built_in">string</span>
+| psw = <span class="hljs-built_in">print</span> wide <span class="hljs-built_in">string</span>
+</code></pre><p>Most common strings will be just zero-terminated ones. Here&#39;s an example by using the debugger to continue the execution of the program until it executes the &#39;open&#39; syscall. When we recover the control over the process, we get the arguments passed to the syscall, pointed by %ebx. Which is obviously a zero terminated string.</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; dcs <span class="hljs-keyword">open</span>
+<span class="hljs-number">0x4a14fc24</span> <span class="hljs-keyword">syscall</span>(<span class="hljs-number">5</span>) <span class="hljs-keyword">open</span> ( <span class="hljs-number">0x4a151c91</span> <span class="hljs-number">0x00000000</span> <span class="hljs-number">0x00000000</span> ) = <span class="hljs-number">0xffffffda</span>
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; dr
+  eax  <span class="hljs-number">0xffffffda</span>    esi  <span class="hljs-number">0xffffffff</span>    eip    <span class="hljs-number">0x4a14fc24</span>
+  ebx  <span class="hljs-number">0x4a151c91</span>    edi  <span class="hljs-number">0x4a151be1</span>    oeax   <span class="hljs-number">0x00000005</span>
+  ecx  <span class="hljs-number">0x00000000</span>    esp  <span class="hljs-number">0xbfbedb1c</span>    eflags <span class="hljs-number">0x200246</span>  
+  edx  <span class="hljs-number">0x00000000</span>    ebp  <span class="hljs-number">0xbfbedbb0</span>    cPaZstIdor<span class="hljs-number">0</span> (PZI)
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; 
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; psz @ <span class="hljs-number">0x4a151c91</span>
+/etc/ld.so.cache
+</code></pre><h3 id="3-5-6-print-memory">3.5.6 Print memory</h3>
+<p>It is also possible to print various packed data types in a single line using the <code>pf</code> command. </p>
+<pre><code>[0xB7F08810]&gt; pf xxS @ rsp
+<span class="hljs-constant">0x7fff0d29da30</span> = 0x00000001 
+<span class="hljs-constant">0x7fff0d29da34</span> = 0x00000000 
+<span class="hljs-constant">0x7fff0d29da38</span> = 0x7fff0d29da38 -&gt; 0x0d29f7ee /bin/ls
+</code></pre><p>This is sometimes useful for looking at the arguments passed to a function, by just giving the &#39;format memory string&#39; as argument and temporally changing the current seek with the <code>@</code> token.</p>
+<p>It is also possible to define arrays of structures with <code>pf</code>. Just prefix the format string with a numeric value.</p>
+<p>You can also define a name for each field of the structure by giving them as optional arguments after the format string splitted by spaces.</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; pf <span class="hljs-number">2</span>*xw pointer <span class="hljs-typedef"><span class="hljs-keyword">type</span> @ esp</span>
+<span class="hljs-number">0x00404888</span> [<span class="hljs-number">0</span>] {
+   pointer : 
+(*<span class="hljs-number">0xffffffff8949ed31</span>)      <span class="hljs-typedef"><span class="hljs-keyword">type</span> : 0x00404888 = 0x8949ed31 </span>
+   <span class="hljs-number">0x00404890</span> = <span class="hljs-number">0x48e2</span> 
+}
+<span class="hljs-number">0x00404892</span> [<span class="hljs-number">1</span>] {
+(*<span class="hljs-number">0x50f0e483</span>)    pointer : <span class="hljs-number">0x00404892</span> = <span class="hljs-number">0x50f0e483</span> 
+     <span class="hljs-typedef"><span class="hljs-keyword">type</span> : 0x0040489a = 0x2440 </span>
+}
+</code></pre><p>A practical example for using pf on a binary GStreamer plugin:</p>
+<pre><code>$ radare ~/.gstreamer-<span class="hljs-number">0.10</span>/plugins/libgstflumms.so
+[<span class="hljs-number">0</span>x000028A0]&gt; seek sym.gst_plugin_desc
+[<span class="hljs-number">0</span>x000185E0]&gt; pf iissxsssss major minor name desc _init <span class="hljs-keyword">version</span> \
+ license source <span class="hljs-keyword">package</span> origin
+     major : <span class="hljs-number">0</span>x000185e0 = <span class="hljs-number">0</span>
+     minor : <span class="hljs-number">0</span>x000185e4 = <span class="hljs-number">10</span>
+      name : <span class="hljs-number">0</span>x000185e8 = <span class="hljs-number">0</span>x000185e8 flumms 
+      desc : <span class="hljs-number">0</span>x000185ec = <span class="hljs-number">0</span>x000185ec Fluendo MMS source 
+     _init : <span class="hljs-number">0</span>x000185f0 = <span class="hljs-number">0</span>x00002940 
+   <span class="hljs-keyword">version</span> : <span class="hljs-number">0</span>x000185f4 = <span class="hljs-number">0</span>x000185f4 <span class="hljs-number">0.10</span>.15.1 
+   license : <span class="hljs-number">0</span>x000185f8 = <span class="hljs-number">0</span>x000185f8 unknown 
+    source : <span class="hljs-number">0</span>x000185fc = <span class="hljs-number">0</span>x000185fc gst-fluendo-mms 
+   <span class="hljs-keyword">package</span> : <span class="hljs-number">0</span>x00018600 = <span class="hljs-number">0</span>x00018600 Fluendo MMS source 
+    origin : <span class="hljs-number">0</span>x00018604 = <span class="hljs-number">0</span>x00018604 http:<span class="hljs-comment">//www.fluendo.com </span>
+</code></pre><h3 id="3-5-7-disassembly">3.5.7 Disassembly</h3>
+<p>The <code>pd</code> command is the one used to disassemble code, it accepts a numeric value to specify how many opcodes are wanted to be disassembled. The <code>pD</code> one acts in the same way, but using a number-of-bytes instead of counting instructions.</p>
+<pre><code> d : disassembly N opcodes   count <span class="hljs-operator">of</span> opcodes
+ D : asm.arch disassembler   bsize <span class="hljs-keyword">bytes</span>
+
+
+ [<span class="hljs-number">0x00404888</span>]&gt; pd <span class="hljs-number">1</span>
+            ;<span class="hljs-comment">-- entry0:</span>
+            <span class="hljs-number">0x00404888</span>    <span class="hljs-number">31</span>ed         xor ebp, ebp
+</code></pre><h3 id="3-5-8-selecting-the-architecture">3.5.8 Selecting the architecture</h3>
+<p>The architecture flavour for the disassembly is defined by the <code>asm.arch</code> eval variable. You can use <code>e asm.arch = ?</code> to list all available architectures.</p>
+<pre><code>[<span class="hljs-number">0xB7F08810</span>]&gt; e asm.arch = ?
+
+_d  <span class="hljs-number">16</span>         <span class="hljs-number">8051</span>        PD      <span class="hljs-number">8051</span> Intel CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      arc         GPL3    Argonaut RISC Core
+ad  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   arm         GPL3    Acorn RISC Machine CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   arm.cs      BSD     Capstone ARM disassembler
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      arm.winedbg LGPL2   WineDBG<span class="hljs-comment">'s ARM disassembler</span>
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      avr         GPL     AVR Atmel
+ad  <span class="hljs-number">32</span>         bf          LGPL3   Brainfuck
+_d  <span class="hljs-number">16</span>         cr16        LGPL3   cr16 disassembly plugin
+_d  <span class="hljs-number">16</span>         csr         PD      Cambridge Silicon Radio (CSR)
+ad  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      dalvik      LGPL3   AndroidVM Dalvik
+ad  <span class="hljs-number">16</span>         dcpu16      PD      Mojang<span class="hljs-comment">'s DCPU-16</span>
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ebc         LGPL3   EFI Bytecode
+_d  <span class="hljs-number">8</span>          gb          LGPL3   GameBoy(TM) (z80-<span class="hljs-keyword">like</span>)
+_d  <span class="hljs-number">16</span>         h8300       LGPL3   H8/<span class="hljs-number">300</span> disassembly plugin
+_d  <span class="hljs-number">8</span>          i8080       BSD     Intel <span class="hljs-number">8080</span> CPU
+ad  <span class="hljs-number">32</span>         java        Apache  Java bytecode
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span>      m68k        BSD     Motorola <span class="hljs-number">68000</span>
+_d  <span class="hljs-number">32</span>         malbolge    LGPL3   Malbolge Ternary VM
+ad  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      mips        GPL3    MIPS CPU
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   mips.cs     BSD     Capstone MIPS disassembler
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   msil        PD      .NET Microsoft Intermediate Language
+_d  <span class="hljs-number">32</span>         nios2       GPL3    NIOS II Embedded Processor
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ppc         GPL3    PowerPC
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      ppc.cs      BSD     Capstone PowerPC disassembler
+ad             rar         LGPL3   RAR VM
+_d  <span class="hljs-number">32</span>         sh          GPL3    SuperH-<span class="hljs-number">4</span> CPU
+_d  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      sparc       GPL3    Scalable Processor Architecture
+_d  <span class="hljs-number">32</span>         tms320      LGPLv3  TMS320 DSP family
+_d  <span class="hljs-number">32</span>         ws          LGPL3   Whitespace esotheric VM
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   x86         BSD     udis86 x86-<span class="hljs-number">16</span>,<span class="hljs-number">32</span>,<span class="hljs-number">64</span>
+_d  <span class="hljs-number">16</span> <span class="hljs-number">32</span> <span class="hljs-number">64</span>   x86.cs      BSD     Capstone X86 disassembler
+a_  <span class="hljs-number">32</span> <span class="hljs-number">64</span>      x86.nz      LGPL3   x86 handmade assembler
+ad  <span class="hljs-number">32</span>         x86.olly    GPL2    OllyDBG X86 disassembler
+ad  <span class="hljs-number">8</span>          z80         NC-GPL2 Zilog Z80
+</code></pre><h3 id="3-5-9-configuring-the-disassembler">3.5.9 Configuring the disassembler</h3>
+<p>There are multiple options that can be used to configure the output of the disassembly, all these options are described using <code>e? asm.</code> </p>
+<pre><code>              asm.os: <span class="hljs-operator"><span class="hljs-keyword">Select</span> operating system (kernel) (linux, darwin, w32,..)
+           asm.bytes: Display the bytes <span class="hljs-keyword">of</span> <span class="hljs-keyword">each</span> instruction
+      asm.cmtflgrefs: <span class="hljs-keyword">Show</span> comment flags associated <span class="hljs-keyword">to</span> branch referece
+        asm.cmtright: <span class="hljs-keyword">Show</span> comments <span class="hljs-keyword">at</span> <span class="hljs-keyword">right</span> <span class="hljs-keyword">of</span> disassembly <span class="hljs-keyword">if</span> they fit <span class="hljs-keyword">in</span> screen
+        asm.comments: <span class="hljs-keyword">Show</span> comments <span class="hljs-keyword">in</span> disassembly <span class="hljs-keyword">view</span>
+          asm.decode: Use code analysis <span class="hljs-keyword">as</span> a disassembler
+           asm.dwarf: <span class="hljs-keyword">Show</span> dwarf comment <span class="hljs-keyword">at</span> disassembly
+            asm.esil: <span class="hljs-keyword">Show</span> ESIL instead <span class="hljs-keyword">of</span> mnemonic
+          asm.filter: <span class="hljs-keyword">Replace</span> numbers <span class="hljs-keyword">in</span> disassembly <span class="hljs-keyword">using</span> flags containing a dot <span class="hljs-keyword">in</span> the name <span class="hljs-keyword">in</span> disassembly
+           asm.flags: <span class="hljs-keyword">Show</span> flags
+          asm.lbytes: Align disasm bytes <span class="hljs-keyword">to</span> <span class="hljs-keyword">left</span>
+           asm.lines: <span class="hljs-keyword">If</span> enabled <span class="hljs-keyword">show</span> ascii-art lines <span class="hljs-keyword">at</span> disassembly
+       asm.linescall: Enable <span class="hljs-keyword">call</span> lines
+        asm.linesout: <span class="hljs-keyword">If</span> enabled <span class="hljs-keyword">show</span> out <span class="hljs-keyword">of</span> block lines
+      asm.linesright: <span class="hljs-keyword">If</span> enabled <span class="hljs-keyword">show</span> lines <span class="hljs-keyword">before</span> opcode instead <span class="hljs-keyword">of</span> offset
+      asm.linesstyle: <span class="hljs-keyword">If</span> enabled iterate the jump list backwards
+       asm.lineswide: <span class="hljs-keyword">If</span> enabled put an <span class="hljs-keyword">space</span> between lines
+          asm.middle: Allow disassembling jumps <span class="hljs-keyword">in</span> the middle <span class="hljs-keyword">of</span> an instruction
+          asm.offset: <span class="hljs-keyword">Show</span> offsets <span class="hljs-keyword">at</span> disassembly
+          asm.pseudo: Enable pseudo syntax
+            asm.<span class="hljs-keyword">size</span>: <span class="hljs-keyword">Show</span> <span class="hljs-keyword">size</span> <span class="hljs-keyword">of</span> opcodes <span class="hljs-keyword">in</span> disassembly (pd)
+        asm.stackptr: <span class="hljs-keyword">Show</span> stack pointer <span class="hljs-keyword">at</span> disassembly
+          asm.cycles: <span class="hljs-keyword">Show</span> cpu-cycles taken <span class="hljs-keyword">by</span> instruction <span class="hljs-keyword">at</span> disassembly
+            asm.tabs: Use tabs <span class="hljs-keyword">in</span> disassembly
+           asm.trace: <span class="hljs-keyword">Show</span> execution traces <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> opcode
+           asm.ucase: Use uppercase syntax <span class="hljs-keyword">at</span> disassembly
+          asm.varsub: Substitute variables <span class="hljs-keyword">in</span> disassembly
+            asm.arch: <span class="hljs-keyword">Set</span> the arch <span class="hljs-keyword">to</span> be usedd <span class="hljs-keyword">by</span> asm
+          asm.parser: <span class="hljs-keyword">Set</span> the asm parser <span class="hljs-keyword">to</span> use
+          asm.segoff: <span class="hljs-keyword">Show</span> segmented address <span class="hljs-keyword">in</span> prompt (x86-<span class="hljs-number">16</span>)
+             asm.cpu: <span class="hljs-keyword">Set</span> the kind <span class="hljs-keyword">of</span> asm.arch cpu
+         asm.profile: configure disassembler (<span class="hljs-keyword">default</span>, simple, gas, smart, debug, <span class="hljs-keyword">full</span>)
+           asm.xrefs: <span class="hljs-keyword">Show</span> xrefs <span class="hljs-keyword">in</span> disassembly
+       asm.functions: <span class="hljs-keyword">Show</span> functions <span class="hljs-keyword">in</span> disassembly
+          asm.syntax: <span class="hljs-keyword">Select</span> assembly syntax
+          asm.nbytes: <span class="hljs-keyword">Number</span> <span class="hljs-keyword">of</span> bytes <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> opcode <span class="hljs-keyword">at</span> disassembly
+       asm.bytespace: Separate hex bytes <span class="hljs-keyword">with</span> a whitespace
+            asm.bits: Word <span class="hljs-keyword">size</span> <span class="hljs-keyword">in</span> bits <span class="hljs-keyword">at</span> assembler
+      asm.lineswidth: <span class="hljs-keyword">Number</span> <span class="hljs-keyword">of</span> columns <span class="hljs-keyword">for</span> program flow arrows</span>
+</code></pre><h3 id="3-5-10-disassembly-syntax">3.5.10 Disassembly syntax</h3>
+<p>The syntax is the flavour of disassembly syntax prefered to be used by the disasm engine.</p>
+<pre><code>e <span class="hljs-keyword">asm</span>.syntax = intel
+e <span class="hljs-keyword">asm</span>.syntax = att
+</code></pre><p>You can also check asm.pseudo which is an experimental pseudocode view and asm.esil, ESIL stands for &#39;Evaluable Strings Intermedate Language&#39;. It aims to describe a human readable representation for every opcode. Those representations can be evaluated in order to emulate code.</p>
+<h2 id="3-7-flags">3.7 Flags</h2>
+<p>The flags are bookmarks at a certain offset in the file that can be stored inside &#39;flag spaces&#39;. A flag space is something like a namespace for flags. They are used to group flags with similar characteristics or of a certain type. Some example of flagspaces could be sections, registers, symbols.</p>
+<p>To create a flag just type:</p>
+<pre><code> <span class="hljs-attr_selector">[0x4A13B8C0]</span>&gt; <span class="hljs-tag">f</span> <span class="hljs-tag">flag_name</span> <span class="hljs-at_rule">@ offset</span>
+</code></pre><p>You can remove this flag adding <code>-</code> at the begginging of the command. Most commands accept <code>-</code> as argument-prefix as a way to delete.</p>
+<pre><code> <span class="hljs-attr_selector">[0x4A13B8C0]</span>&gt; <span class="hljs-tag">f</span> <span class="hljs-tag">-flag_name</span> 
+</code></pre><p>To switch/create between flagspaces use the <code>fs</code> command:</p>
+<pre><code> [<span class="hljs-number">0</span>x4A13B8C0]&gt; fs   ; list flag spaces
+
+ <span class="hljs-number">00</span>   symbols
+ <span class="hljs-number">01</span>   imports
+ <span class="hljs-number">02</span>   sections
+ <span class="hljs-number">03</span>   strings
+ <span class="hljs-number">04</span>   regs
+ <span class="hljs-number">05</span>   maps
+
+ [<span class="hljs-number">0</span>x4A13B8C0]&gt; fs symbols ; <span class="hljs-keyword">select</span> only <span class="hljs-keyword">flags</span> <span class="hljs-keyword">in</span> symbols flagspace
+ [<span class="hljs-number">0</span>x4A13B8C0]&gt; f          ; list only <span class="hljs-keyword">flags</span> <span class="hljs-keyword">in</span> symbols flagspace
+
+ [<span class="hljs-number">0</span>x4A13B8C0]&gt; fs *      ; <span class="hljs-keyword">select</span> all flagspaces
+</code></pre><p>You can rename flags with <code>fr</code>.</p>
+<h2 id="3-8-write">3.8 Write</h2>
+<p>Radare can manipulate the file in multiple ways. You can resize the file, move bytes, copy/paste them, insert mode (shifting data to the end of the block or file) or just overwrite some bytes with an address, the contents of a file, a widestring or inline assembling an opcode.</p>
+<p>To resize. Use the <code>r</code> command which accepts a numeric argument. Possitive valule sets the new size to the file. A negative one will strip N bytes from the current seek down-sizing the file.</p>
+<pre><code>r <span class="hljs-number">1024</span>      ; resize <span class="hljs-operator">the</span> <span class="hljs-built_in">file</span> <span class="hljs-built_in">to</span> <span class="hljs-number">1024</span> <span class="hljs-keyword">bytes</span>
+r -<span class="hljs-number">10</span> @ <span class="hljs-number">33</span>  ; strip <span class="hljs-number">10</span> <span class="hljs-keyword">bytes</span> <span class="hljs-keyword">at</span> <span class="hljs-built_in">offset</span> <span class="hljs-number">33</span>
+</code></pre><p>To write bytes just use the <code>w</code> command. It accepts multiple input formats like inline assembling, endian-friendly dwords, files, hexpair files, wide strings:</p>
+<pre><code>[<span class="hljs-number">0</span>x00404888]&gt; w?
+|Usage: w[x] [str] [&lt;<span class="hljs-keyword">file</span>] [&lt;&lt;EOF] [@addr]
+| w foobar     <span class="hljs-keyword">write</span> <span class="hljs-keyword">string</span> <span class="hljs-string">'foobar'</span>
+| wh r2        whereis/which shell command
+| wr <span class="hljs-number">10</span>        <span class="hljs-keyword">write</span> <span class="hljs-number">10</span> random bytes
+| ww foobar    <span class="hljs-keyword">write</span> wide <span class="hljs-keyword">string</span> <span class="hljs-string">'f\x00o\x00o\x00b\x00a\x00r\x00'</span>
+| wa push ebp  <span class="hljs-keyword">write</span> opcode, separated by <span class="hljs-string">';'</span> (use <span class="hljs-string">'"'</span> around the command)
+| waf <span class="hljs-keyword">file</span>     assemble <span class="hljs-keyword">file</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">write</span> bytes
+| wA r <span class="hljs-number">0</span>       alter/modify opcode at current seek (see wA?)
+| wb <span class="hljs-number">010203</span>    fill current block <span class="hljs-keyword">with</span> cyclic hexpairs
+| wc[ir*?]     <span class="hljs-keyword">write</span> cache undo/commit/reset/list (io.cache)
+| wx <span class="hljs-number">9090</span>      <span class="hljs-keyword">write</span> two intel nops
+| wv eip+<span class="hljs-number">34</span>    <span class="hljs-keyword">write</span> <span class="hljs-number">32</span>-<span class="hljs-number">64</span> bit value
+| wo? hex      <span class="hljs-keyword">write</span> <span class="hljs-keyword">in</span> block <span class="hljs-keyword">with</span> operation. <span class="hljs-string">'wo?'</span> fmi
+| wm f0ff      <span class="hljs-keyword">set</span> binary mask hexpair <span class="hljs-keyword">to</span> be used as cyclic <span class="hljs-keyword">write</span> mask
+| ws pstring   <span class="hljs-keyword">write</span> <span class="hljs-number">1</span> byte <span class="hljs-keyword">for</span> length <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> the <span class="hljs-keyword">string</span>
+| wf -|<span class="hljs-keyword">file</span>    <span class="hljs-keyword">write</span> contents <span class="hljs-keyword">of</span> <span class="hljs-keyword">file</span> at current offset
+| wF -|<span class="hljs-keyword">file</span>    <span class="hljs-keyword">write</span> contents <span class="hljs-keyword">of</span> hexpairs <span class="hljs-keyword">file</span> here
+| wp -|<span class="hljs-keyword">file</span>    apply radare patch <span class="hljs-keyword">file</span>. See wp? fmi
+| wt <span class="hljs-keyword">file</span> [sz] <span class="hljs-keyword">write</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">file</span> (from current seek, blocksize <span class="hljs-keyword">or</span> sz bytes)
+</code></pre><p>Some examples:</p>
+<pre><code> [<span class="hljs-number">0x00000000</span>]&gt; wx <span class="hljs-number">123456</span> <span class="hljs-decorator">@ 0x8048300</span>
+ [<span class="hljs-number">0x00000000</span>]&gt; wv <span class="hljs-number">0x8048123</span> <span class="hljs-decorator">@ 0x8049100</span>
+ [<span class="hljs-number">0x00000000</span>]&gt; wa jmp <span class="hljs-number">0x8048320</span>
+</code></pre><h3 id="3-8-1-write-over-with-operation">3.8.1 Write over with operation</h3>
+<p>The <code>wo</code> write command accepts multiple kinds of operations that can be applied on the curren block. This is for example a XOR, ADD, SUB, ...</p>
+<pre><code>[<span class="hljs-number">0</span>x4A13B8C0]&gt; wo?
+<span class="hljs-string">|Usage: wo[asmdxoArl24] [hexpairs] @ addr[:bsize]</span>
+<span class="hljs-string">|Example:</span>
+<span class="hljs-string">|  wox 0x90   ; xor cur block with 0x90</span>
+<span class="hljs-string">|  wox 90     ; xor cur block with 0x90</span>
+<span class="hljs-string">|  wox 0x0203 ; xor cur block with 0203</span>
+<span class="hljs-string">|  woa 02 03  ; add [0203][0203][...] to curblk</span>
+<span class="hljs-string">|  woe 02 03  </span>
+<span class="hljs-string">|Supported operations:</span>
+<span class="hljs-string">|  wow  ==  write looped value (alias for 'wb')</span>
+<span class="hljs-string">|  woa  +=  addition</span>
+<span class="hljs-string">|  wos  -=  substraction</span>
+<span class="hljs-string">|  wom  *=  multiply</span>
+<span class="hljs-string">|  wod  /=  divide</span>
+<span class="hljs-string">|  wox  ^=  xor</span>
+<span class="hljs-string">|  woo  |=  or</span>
+<span class="hljs-string">|  woA  &amp;=  and</span>
+<span class="hljs-string">|  woR  random bytes (alias for 'wr $b'</span>
+<span class="hljs-string">|  wor  &gt;&gt;= shift right</span>
+<span class="hljs-string">|  wol  &lt;&lt;= shift left</span>
+<span class="hljs-string">|  wo2  2=  2 byte endian swap</span>
+<span class="hljs-string">|  wo4  4=  4 byte endian swap</span>
+</code></pre><p>This way it is possible to implement ciphering algorithms using radare core primitives.</p>
+<p>A sample session doing a xor(90) + addition(01 02)</p>
+<pre><code>[0x7fcd6a891630]&gt; px
+-<span class="ruby"> offset -       <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  <span class="hljs-constant">A</span> <span class="hljs-constant">B</span>  <span class="hljs-constant">C</span> <span class="hljs-constant">D</span>  <span class="hljs-constant">E</span> <span class="hljs-constant">F</span>  <span class="hljs-number">01234567</span>89ABCDEF
+</span>0x7fcd6a891630  4889 e7e8 6839 0000 4989 c48b 05ef 1622  H...h9..I......"
+0x7fcd6a891640  005a 488d 24c4 29c2 5248 89d6 4989 e548  .ZH.$.).RH..I..H
+0x7fcd6a891650  83e4 f048 8b3d 061a 2200 498d 4cd5 1049  ...H.=..".I.L..I
+0x7fcd6a891660  8d55 0831 ede8 06e2 0000 488d 15cf e600  .U.1......H.....
+
+
+[0x7fcd6a891630]&gt; wox 90
+[0x7fcd6a891630]&gt; px
+-<span class="ruby"> offset -       <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  <span class="hljs-constant">A</span> <span class="hljs-constant">B</span>  <span class="hljs-constant">C</span> <span class="hljs-constant">D</span>  <span class="hljs-constant">E</span> <span class="hljs-constant">F</span>  <span class="hljs-number">01234567</span>89ABCDEF
+</span>0x7fcd6a891630  d819 7778 d919 541b 90ca d81d c2d8 1946  ..wx..T........F
+0x7fcd6a891640  1374 60d8 b290 d91d 1dc5 98a1 9090 d81d  .t`.............
+0x7fcd6a891650  90dc 197c 9f8f 1490 d81d 95d9 9f8f 1490  ...|............
+0x7fcd6a891660  13d7 9491 9f8f 1490 13ff 9491 9f8f 1490  ................
+
+
+[0x7fcd6a891630]&gt; woa 01 02
+[0x7fcd6a891630]&gt; px
+-<span class="ruby"> offset -       <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  <span class="hljs-constant">A</span> <span class="hljs-constant">B</span>  <span class="hljs-constant">C</span> <span class="hljs-constant">D</span>  <span class="hljs-constant">E</span> <span class="hljs-constant">F</span>  <span class="hljs-number">01234567</span>89ABCDEF
+</span>0x7fcd6a891630  d91b 787a 91cc d91f 1476 61da 1ec7 99a3  ..xz.....va.....
+0x7fcd6a891640  91de 1a7e d91f 96db 14d9 9593 1401 9593  ...~............
+0x7fcd6a891650  c4da 1a6d e89a d959 9192 9159 1cb1 d959  ...m...Y...Y...Y
+0x7fcd6a891660  9192 79cb 81da 1652 81da 1456 a252 7c77  ..y....R...V.R|w
+</code></pre><h2 id="3-9-yank-paste">3.9 Yank/Paste</h2>
+<p>You can yank/paste bytes in visual mode using the <code>y</code> and <code>Y</code> key bindings that are alias for the <code>y</code> and <code>yy</code> commands of the shell. There is an internal buffer that stores N bytes from the current seek. You can write-back to another seek using the <code>yy</code> one.</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; y?
+|Usage: y[ptxy] [len] [[@]addr]
+| y                show yank buffer information (srcoff len bytes)
+| y <span class="hljs-number">16</span>             <span class="hljs-keyword">copy</span> <span class="hljs-number">16</span> bytes <span class="hljs-keyword">into</span> clipboard
+| y <span class="hljs-number">16</span> <span class="hljs-number">0x200</span>       <span class="hljs-keyword">copy</span> <span class="hljs-number">16</span> bytes <span class="hljs-keyword">into</span> clipboard <span class="hljs-keyword">from</span> <span class="hljs-number">0x200</span>
+| y <span class="hljs-number">16</span> @ <span class="hljs-number">0x200</span>     <span class="hljs-keyword">copy</span> <span class="hljs-number">16</span> bytes <span class="hljs-keyword">into</span> clipboard <span class="hljs-keyword">from</span> <span class="hljs-number">0x200</span>
+| yp               print <span class="hljs-property">contents</span> <span class="hljs-keyword">of</span> clipboard
+| yx               print <span class="hljs-property">contents</span> <span class="hljs-keyword">of</span> clipboard <span class="hljs-keyword">in</span> hexadecimal
+| yt <span class="hljs-number">64</span> <span class="hljs-number">0x200</span>      <span class="hljs-keyword">copy</span> <span class="hljs-number">64</span> bytes <span class="hljs-keyword">from</span> current seek <span class="hljs-keyword">to</span> <span class="hljs-number">0x200</span>
+| yf <span class="hljs-number">64</span> <span class="hljs-number">0x200</span> <span class="hljs-type">file</span> <span class="hljs-keyword">copy</span> <span class="hljs-number">64</span> bytes <span class="hljs-keyword">from</span> <span class="hljs-number">0x200</span> <span class="hljs-keyword">from</span> <span class="hljs-type">file</span> (opens w/ io), use -<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> all bytes
+| yfa <span class="hljs-type">file</span> <span class="hljs-keyword">copy</span>    <span class="hljs-keyword">copy</span> all bytes <span class="hljs-keyword">from</span> <span class="hljs-keyword">from</span> <span class="hljs-type">file</span> (opens w/ io)
+| yy <span class="hljs-number">0x3344</span>        paste clipboard
+</code></pre><p>Sample session:</p>
+<pre><code><span class="hljs-attr_selector">[0x00000000]</span>&gt; <span class="hljs-tag">s</span> 0<span class="hljs-tag">x100</span>    ; <span class="hljs-tag">seek</span> <span class="hljs-tag">at</span> 0<span class="hljs-tag">x100</span>
+<span class="hljs-attr_selector">[0x00000100]</span>&gt; <span class="hljs-tag">y</span> 100      ; <span class="hljs-tag">yanks</span> 100 <span class="hljs-tag">bytes</span> <span class="hljs-tag">from</span> <span class="hljs-tag">here</span>
+<span class="hljs-attr_selector">[0x00000200]</span>&gt; <span class="hljs-tag">s</span> 0<span class="hljs-tag">x200</span>    ; <span class="hljs-tag">seek</span> 0<span class="hljs-tag">x200</span>
+<span class="hljs-attr_selector">[0x00000200]</span>&gt; <span class="hljs-tag">yy</span>         ; <span class="hljs-tag">pastes</span> 100 <span class="hljs-tag">bytes</span>
+</code></pre><p>You can perform a yank and paste in a single line by just using the <code>yt</code> command (yank-to). The syntax is the following:</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; x
+   offset   <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  <span class="hljs-constant">A</span> <span class="hljs-constant">B</span>  <span class="hljs-number">01234567</span>89AB
+<span class="hljs-number">0x4A13B8C0</span>, <span class="hljs-number">89</span>e<span class="hljs-number">0</span> e839 <span class="hljs-number">0700</span> <span class="hljs-number">00</span>89 c7e8 e2ff ...<span class="hljs-number">9</span>........
+<span class="hljs-number">0x4A13B8CC</span>, ffff <span class="hljs-number">81</span>c3 eea6 <span class="hljs-number">0100</span> <span class="hljs-number">8</span>b83 08ff ............
+<span class="hljs-number">0x4A13B8D8</span>, ffff <span class="hljs-number">5</span>a8d <span class="hljs-number">2484</span> <span class="hljs-number">29</span>c2           ..<span class="hljs-constant">Z</span>.<span class="hljs-variable">$.</span>).    
+
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; yt <span class="hljs-number">8</span> <span class="hljs-number">0x4A13B8CC</span> @ <span class="hljs-number">0x4A13B8C0</span>
+
+[<span class="hljs-number">0x4A13B8C0</span>]&gt; x
+   offset   <span class="hljs-number">0</span> <span class="hljs-number">1</span>  <span class="hljs-number">2</span> <span class="hljs-number">3</span>  <span class="hljs-number">4</span> <span class="hljs-number">5</span>  <span class="hljs-number">6</span> <span class="hljs-number">7</span>  <span class="hljs-number">8</span> <span class="hljs-number">9</span>  <span class="hljs-constant">A</span> <span class="hljs-constant">B</span>  <span class="hljs-number">01234567</span>89AB
+<span class="hljs-number">0x4A13B8C0</span>, <span class="hljs-number">89</span>e<span class="hljs-number">0</span> e839 <span class="hljs-number">0700</span> <span class="hljs-number">00</span>89 c7e8 e2ff ...<span class="hljs-number">9</span>........
+<span class="hljs-number">0x4A13B8CC</span>, <span class="hljs-number">89</span>e<span class="hljs-number">0</span> e839 <span class="hljs-number">0700</span> <span class="hljs-number">00</span>89 <span class="hljs-number">8</span>b83 08ff ...<span class="hljs-number">9</span>........
+<span class="hljs-number">0x4A13B8D8</span>, ffff <span class="hljs-number">5</span>a8d <span class="hljs-number">2484</span> <span class="hljs-number">29</span>c2           ..<span class="hljs-constant">Z</span>.<span class="hljs-variable">$.</span>).    
+</code></pre><h3 id="3-10-comparing-bytes">3.10 Comparing bytes</h3>
+<p>You can compare data using the <code>c</code> command that accepts different input formats and compares the input against the bytes in the current seek.</p>
+<pre><code>[<span class="hljs-number">0x00404888</span>]&gt; c?
+|Usage: c[?dfx] [argument]
+| c  [<span class="hljs-type">string</span>]    Compares a plain <span class="hljs-keyword">with</span> escaped chars <span class="hljs-type">string</span>
+| cc [<span class="hljs-keyword">at</span>] [(<span class="hljs-keyword">at</span>)] Compares <span class="hljs-keyword">in</span> two hexdump columns <span class="hljs-keyword">of</span> block size
+| c4 [value]     Compare a doubleword <span class="hljs-keyword">from</span> a math expression
+| c8 [value]     Compare a quadword <span class="hljs-keyword">from</span> a math expression
+| cx [hexpair]   Compare hexpair <span class="hljs-type">string</span>
+| cX [addr]      Like 'cc' <span class="hljs-keyword">but</span> using hexdiff output
+| cf [<span class="hljs-type">file</span>]      Compare <span class="hljs-property">contents</span> <span class="hljs-keyword">of</span> <span class="hljs-type">file</span> <span class="hljs-keyword">at</span> current seek
+| cg[o] [<span class="hljs-type">file</span>]   Graphdiff current <span class="hljs-type">file</span> <span class="hljs-keyword">and</span> [<span class="hljs-type">file</span>]
+| cu [addr] @<span class="hljs-keyword">at</span>  Compare memory hexdumps <span class="hljs-keyword">of</span> $$ <span class="hljs-keyword">and</span> dst <span class="hljs-keyword">in</span> unified diff
+| cw[us?] [...]  Compare memory watchers
+| cat  [<span class="hljs-type">file</span>]    Show <span class="hljs-property">contents</span> <span class="hljs-keyword">of</span> <span class="hljs-type">file</span> (see pwd, ls)
+| cl|cls|clear   Clear screen, (clear0 <span class="hljs-keyword">to</span> goto <span class="hljs-number">0</span>, <span class="hljs-number">0</span> only)
+</code></pre><p>An example of memory comparision:</p>
+<pre><code>[<span class="hljs-number">0x08048000</span>]&gt; p8 <span class="hljs-number">4</span>
+<span class="hljs-number">7f</span> <span class="hljs-number">45</span> <span class="hljs-number">4</span>c <span class="hljs-number">46</span> 
+
+[<span class="hljs-number">0x08048000</span>]&gt; cx <span class="hljs-number">7f</span> <span class="hljs-number">45</span> <span class="hljs-number">90</span> <span class="hljs-number">46</span>
+Compare <span class="hljs-number">3</span>/<span class="hljs-number">4</span> equal bytes
+<span class="hljs-number">0x00000002</span> (byte=<span class="hljs-number">03</span>)   <span class="hljs-number">90</span> <span class="hljs-string">' '</span>  -&gt;  <span class="hljs-number">4</span>c <span class="hljs-string">'L'</span>
+[<span class="hljs-number">0x08048000</span>]&gt; 
+</code></pre><p>Another subcommand of <code>c</code> (compare) command is the <code>cc</code> which stands for &#39;compare code&#39;.</p>
+<pre><code>[<span class="hljs-number">0x4A13B8C0</span>]&gt; cc <span class="hljs-number">0x39e8e089</span> <span class="hljs-decorator">@ 0x4A13B8C0</span>
+
+[<span class="hljs-number">0x08049A80</span>]&gt; cc sym.main2 <span class="hljs-decorator">@ sym.main</span>
+</code></pre><p><code>c8</code> Compare a quadword from the current seek (0x00000000) from a math expression</p>
+<pre><code>[<span class="hljs-number">0</span>x00000000]&gt; <span class="hljs-function_or_atom">c8</span> <span class="hljs-number">4</span>
+
+<span class="hljs-variable">Compare</span> <span class="hljs-number">1</span>/<span class="hljs-number">8</span> <span class="hljs-function_or_atom">equal</span> <span class="hljs-function_or_atom">bytes</span> (<span class="hljs-number">0</span><span class="hljs-comment">%)</span>
+<span class="hljs-number">0</span>x00000000 (<span class="hljs-function_or_atom">byte</span>=<span class="hljs-number">01</span>)   <span class="hljs-number">7</span>f <span class="hljs-string">' '</span>  <span class="hljs-arrow">-&gt;</span>  <span class="hljs-number">04</span> <span class="hljs-string">' '</span>
+<span class="hljs-number">0</span>x00000001 (<span class="hljs-function_or_atom">byte</span>=<span class="hljs-number">02</span>)   <span class="hljs-number">45</span> <span class="hljs-string">'E'</span>  <span class="hljs-arrow">-&gt;</span>  <span class="hljs-number">00</span> <span class="hljs-string">' '</span>
+<span class="hljs-number">0</span>x00000002 (<span class="hljs-function_or_atom">byte</span>=<span class="hljs-number">03</span>)   <span class="hljs-number">4</span>c <span class="hljs-string">'L'</span>  <span class="hljs-arrow">-&gt;</span>  <span class="hljs-number">00</span> <span class="hljs-string">' '</span>
+</code></pre><p>This number can be an math expressions using flag names and so:</p>
+<pre><code>[<span class="hljs-number">0x00000000</span>]&gt; cx <span class="hljs-number">7</span>f469046
+
+Compare <span class="hljs-number">2</span>/<span class="hljs-number">4</span> equal bytes
+<span class="hljs-number">0x00000001</span> (<span class="hljs-keyword">byte</span>=<span class="hljs-number">02</span>)   <span class="hljs-number">45</span> <span class="hljs-string">'E'</span>  -&gt;  <span class="hljs-number">46</span> <span class="hljs-string">'F'</span>
+<span class="hljs-number">0x00000002</span> (<span class="hljs-keyword">byte</span>=<span class="hljs-number">03</span>)   <span class="hljs-number">4</span>c <span class="hljs-string">'L'</span>  -&gt;  <span class="hljs-number">90</span> <span class="hljs-string">' '</span>
+</code></pre><p>We can use the compare command against a file previously dumped to disk from the contents of the current block.</p>
+<pre><code>r2 /bin/<span class="hljs-literal">true</span>
+[<span class="hljs-number">0x08049A80</span>]&gt; s <span class="hljs-number">0</span>
+[<span class="hljs-number">0x08048000</span>]&gt; cf /bin/<span class="hljs-literal">true</span>
+Compare <span class="hljs-number">512</span>/<span class="hljs-number">512</span> <span class="hljs-built_in">equal</span> bytes
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./ch2_configuration.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./ch4_visual_mode.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+    </body>
+</html>
